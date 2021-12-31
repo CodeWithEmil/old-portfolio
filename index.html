@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" style = "overflow-y: auto;">
         <head>
             <title>Emilio Nájera</title>
+
+            <link rel = "shortcut icon" href = "./images/shortcut-icon-5.png">
+
+            <link rel = "stylesheet" href = "css/general.css">
+            <link rel = "stylesheet" href = "css/navbar.css">
+            <link rel = "stylesheet" href = "css/structure.css">
+
+            <script src="https://kit.fontawesome.com/b1a0b78bd7.js" crossorigin="anonymous"></script>
 
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
-            
+
+            <input type="checkbox" id="menu">
+            <label for="menu" class="icon">
+                <div class = "menu"></div>
+            </label>
+            <nav>
+                <ul>
+                    <a href = "#">
+                        <div class = "iconContainer"><i class="fas fa-home"></i>Home</div>
+                    </a>
+
+                    <a href = "https://www.instagram.com/codewithemil/" target = "_blank" rel = "noopener noreferrer">
+                        <div class = "iconContainer"><i class="fas fa-heart"></i>CodeWithEmil</div>
+                    </a>
+
+                    <a href = "https://www.github.com/codewithemill/" target = "_blank" rel = "noopener noreferrer">
+                        <div class = "iconContainer"><i class="fas fa-rocket"></i>Projects</div>
+                    </a>
+
+                    <a href = "https://www.buymeacoffee.com/codewithemil" target = "_blank" rel = "noopener noreferrer">
+                        <div class = "iconContainer"><i class="fas fa-mug-hot"></i>Support Me</div>
+                    </a>
+
+                    <li>
+                        <div class = "iconContainer"><i class="fas fa-book"></i>Free eBook</div>
+                    </li>
+
+                </ul>
+                <div class = "toggleContainer">
+                    <div class = "toggle" id = "toggle">
+                        <i class = "far fa-moon" id = "toggleIcon"></i>
+                    </div>
+                </div>
+            </nav>
+
+                        <!--<div class = "structure">
+                <div class = "sectionOne"></div>
+            </div>
+
+            <div class = "content"></div>-->
+
+            <script src = "js/navbar.js"></script>
         </body>
     </html>

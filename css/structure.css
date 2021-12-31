@@ -1,0 +1,14 @@
+:root {
+    --generalBg: #f9fafb;
+    --grayBg: #ececec;
+}
+
+body {
+    background: var(--generalBg);
+    transition: .4s;
+}
+
+    .sectionOne {
+        background: var(--generalBg);
+        height: 10vh;
+    }

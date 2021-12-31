@@ -1,0 +1,187 @@
+/*
+
+    Nothing is Responsive. Will be in a few versions!
+
+*/
+
+:root {
+    --iconBg: #ececec;
+    --iconBorder: rgba(0, 0, 0, 0.226);
+}
+
+input#menu {
+    display: none;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+
+    padding: 16px;
+    margin-left: 2px;
+    background: #FFF;
+
+    display: block;
+    cursor: pointer;
+}
+
+    label.icon {
+        position: fixed;
+        z-index: 200;
+    }
+
+    .icon .menu,
+    .icon .menu::before,
+    .icon .menu::after {
+        content: '';
+
+        height: 2px;
+        width: 20px;
+
+        background: #9FB1BD;
+
+        display: block;
+        position: absolute;
+
+        transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+    }
+
+    #menu:checked + .icon .menu::after {
+        transform: rotate(-45deg);
+    }
+
+    #menu:checked + .icon .menu::before,
+    #menu:checked + .icon .menu::after {
+        top: 0;
+        transition: top ease .3s, transform ease .3s .3s;
+    }
+
+nav {
+    height: 100vh;
+    width: 60px;
+
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    
+    padding-top: 60px;
+    position: fixed;
+    
+    transition: width ease .6s;
+    z-index: 100;
+
+    overflow: hidden;
+}
+
+    #menu:checked ~ nav{
+        width: 200px;
+    }
+
+    #menu:checked + .icon .menu {
+        background: transparent;
+    }
+    
+    #menu:checked + .icon .menu::before {
+        transform: rotate(45deg);
+    }
+
+.icon:hover .menu,
+.icon:hover .menu::before,
+.icon:hover .menu::after {
+    background: #FC5185;
+}
+
+    .icon .menu {
+        top: 27px;
+        left: 18px;
+    }
+
+        .icon .menu::before {
+            top: -6px;
+        }
+
+        .icon .menu::after {
+            top: 6px;
+        }
+
+nav ul {
+    list-style: none;
+}
+
+    nav li, nav a {
+        cursor: pointer;
+        display: block;
+
+        line-height: 60px;
+        padding-left: 16px;
+
+        white-space: nowrap;
+    }
+
+        nav li:hover, nav a:hover {
+            color: #fff;
+            background: #FC5185;
+        }
+
+        nav li:hover i, nav a:hover i, nav a:visited:hover {
+            color: #fff;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+            nav a:visited {
+                color: #000;
+            }
+
+            nav i {
+                font-size: 2.5vh;
+                color: #9FB1BD;
+                margin-right: 25px;
+                vertical-align: text-bottom;
+            }
+
+        .iconContainer {
+            border: 3px solid transparent;
+        }
+
+    
+        .toggleContainer {
+            height: 7.5vh;
+
+            display: grid;
+            place-items: center;
+        }
+
+            .toggle {
+                height: 75%;
+                width: 75%;
+                
+                background: var(--iconBg);
+                border-style: solid;
+                border-width: 2.5px;
+                border-color: transparent;
+                border-radius: 8px;
+
+                cursor: pointer;
+
+                display: grid;
+                place-items: center;
+
+                transition: all .4s;
+            }
+
+                .toggle:hover {
+                    border-color: var(--iconBorder);
+                }
+
+                #menu:checked ~ nav div div {
+                    width: 85%;
+                }
+
+                .toggle i {
+                    margin-right: 0;
+                    pointer-events: none;
+
+                    transition: .4s;
+                }
