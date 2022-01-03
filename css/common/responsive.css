@@ -1,0 +1,16 @@
+
+
+/*Structure*/
+
+    /*Cover*/
+
+        @media screen and (max-width: 700px) {
+            .cover--bgImage {
+                height: 90vh;
+            }
+
+            .cover--text h3 {
+                width: 50vw;
+                font-size: 10px;
+            }
+        }

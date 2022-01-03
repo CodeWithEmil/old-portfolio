@@ -58,7 +58,8 @@ input#menu {
 
 nav {
     height: 100vh;
-    width: 60px;
+    width: 4.166vw; /*60px*/ /* 3.75rem*/
+    min-width: 3.75rem;
 
     background-color: #FFF;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
@@ -68,12 +69,22 @@ nav {
     
     transition: width ease .6s;
     z-index: 100;
-
+    
     overflow: hidden;
 }
 
+
+    main {
+        width: calc(100vw - 4.166vw);
+        transition: width ease .6s;
+    }
+
     #menu:checked ~ nav{
-        width: 200px;
+        width: 12.5rem; /*200px*/
+    }
+
+    #menu:checked ~ main { 
+        width: calc(100vw - 12.5rem);
     }
 
     #menu:checked + .icon .menu {
