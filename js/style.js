@@ -4,9 +4,22 @@ let body = document.querySelector("body");
     TOOGLE STYLES
 */
 
+    //Variables for colors
+    let lighterWhite = "#f9fafb";
+    let darkerWhiteBg = "#e7e7e7";
+    let darkerWhite = "#ececec";
+    let darkerGray = "#111";
+    let lighterGray = "#2f2f2f";
+
+    let lightText = "#222";
+
     //Variables for Elements
     let toggle = document.querySelector("#toggle");
     let icon = document.querySelector("#toggleIcon");
+    let bodyDescription = document.querySelector(".description--svg--path");
+
+    let svgDescriptionOne = document.querySelector(".description--content--one--svg--one")
+    let svgDescriptionTwo = document.querySelector(".description--content--one--svg--two")
 
     let root = document.querySelector(':root');
     let clicked = false;
@@ -14,37 +27,58 @@ let body = document.querySelector("body");
     toggle.addEventListener("click", () => {
         if (clicked) {
             //Declaring Variables for general backgrounds
-                set("generalBg", "#f9fafb");
-                set("grayBg", "#ececec");
+                set("generalBg", lighterWhite);
+                set("grayBg", darkerWhiteBg);
                 
                 //Color of elements:
                 set("textColor", "#040d21");
+                set("lighterColor", lightText)
                 
                 set("iconBorder", "#adadad");
                 icon.classList.replace("fa-sun", "fa-moon");
                 
-                toggle.style.backgroundColor = "#ececec";
+                toggle.style.backgroundColor = darkerWhite;
                 icon.style.color = "#9FB1BD";
+
+                //SVG
+                bodyDescription.setAttribute("fill", lighterWhite);
+                svgDescriptionStyles(true);
             } else if (!clicked) {
                 //Declaring Variables for general backgrounds
-                set("generalBg", "#111");
-                set("grayBg", "#2f2f2f");
+                set("generalBg", darkerGray);
+                set("grayBg", lighterGray);
 
                 //Color of elements:
-                set("textColor", "#f9fafb");
+                set("textColor", lighterWhite);
+                set("lighterColor", darkerWhite)
 
-            set("iconBorder", "#000");
-            icon.classList.replace("fa-moon", "fa-sun");
-            
-            toggle.style.backgroundColor = "#2f2f2f";
-            icon.style.color = "#ececec";
-        }
+                set("iconBorder", "#000");
+                icon.classList.replace("fa-moon", "fa-sun");
+                
+                toggle.style.backgroundColor = lighterGray;
+                icon.style.color = darkerWhite;
+
+                //SVG
+                bodyDescription.setAttribute("fill", darkerGray);
+                svgDescriptionStyles(false);
+            }
 
         clicked = !clicked;
     });
 
     function set(variable, value) {
         root.style.setProperty('--' + variable, value);
+    }
+
+    function svgDescriptionStyles(addingOrRemoving) {
+        //True is adding, False is removing
+        if(addingOrRemoving) {
+            svgDescriptionOne.setAttribute("fill", darkerWhiteBg);
+            svgDescriptionTwo.setAttribute("fill", darkerWhiteBg);
+        } else if (!addingOrRemoving) {
+            svgDescriptionOne.setAttribute("fill", lighterGray);
+            svgDescriptionTwo.setAttribute("fill", lighterGray);
+        }
     }
 
 

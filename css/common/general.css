@@ -6,4 +6,15 @@
     box-sizing: border-box;
 
     font-family: "IBM Plex Sans";
+    scroll-behavior: smooth;
 }
+
+.invisible--div {
+    pointer-events: none;
+    user-select: none;
+    filter: opacity(0);
+}
+
+    .invisible--div h1 {
+        font-size: 5rem;
+    }
