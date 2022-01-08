@@ -1,0 +1,58 @@
+.cover {
+    min-height: 110vh;
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+}
+
+    .cover--bgImage {
+        z-index: -1;
+        position: absolute;
+        height: 125vh;
+        width: 100%;
+
+        filter: brightness(50%);
+
+        background-image: url("../../../images/golden-gate.jpeg");
+        background-position: 50% 40%;
+        
+        transition: .4s;
+    }
+
+        .cover--bgImage--after {
+            filter: brightness(25%);
+        }
+
+    .cover--text {
+        color: #f9fafb;
+
+        margin-bottom: 10vh;
+        
+        display: grid;
+        place-items: center;
+    }
+    
+        .cover--text h1 {
+            font-size: min(10vw, 144px);
+        }
+
+        .cover--text h3 {
+            letter-spacing: .35rem;
+            font-size: 1.25vw; /*18px*/
+            text-align: center;
+        }
+
+        @media screen and (max-width: 700px) {
+            .cover--text h3 {
+                display: none;
+            }
+        }
+
+        
+.delimitation--svg {
+    position: absolute;
+    top: 92vh;
+
+    z-index: -1;
+}

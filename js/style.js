@@ -97,3 +97,6 @@ let body = document.querySelector("body");
     }
 
     body.onscroll = changeCoverStyles;
+
+    console.log(window.innerWidth + " is the inner Width");
+    console.log(window.outerWidth + " is the outer Width");

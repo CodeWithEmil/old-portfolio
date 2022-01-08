@@ -1,0 +1,35 @@
+:root {
+    --generalBg: #f9fafb;
+    --grayBg: #e7e7e7;
+
+    --textColor: color: #040d21;
+    --lighterColor: color: #222;
+}
+
+.me--container {
+    border: solid red;
+    color: var(--textColor);
+
+    height: 80vh;
+    min-height: 60vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .me--layout {
+        border: solid plum;
+        height: 100%;
+        width: 62%;
+    }
+
+        .me--info {
+            border: solid orange;
+        }
+
+        .me--image {
+            border: solid brown;
+        }

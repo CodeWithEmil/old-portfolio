@@ -55,6 +55,7 @@ body {
     }
 
     .delimitation {
+        border: solid lime;
 
         position: absolute;
         z-index: 4;
@@ -66,7 +67,7 @@ body {
     }
 
     .mainBody {
-        height: fit-content;
+        height: 100vh;
         width: calc(100vw - 4.166vw);
 
         position: absolute;
@@ -74,64 +75,7 @@ body {
         
 
     }
-
-        .cover {
-            color: var(--textColor);
-
-            min-height: 110vh;
-            width: 100%;
-
-            display: grid;
-            place-items: center;
-        }
-
-            .cover--bgImage {
-                z-index: -1;
-                position: absolute;
-                height: 125vh;
-                width: 100%;
-
-                filter: brightness(50%);
-
-                background-image: url("../images/golden-gate.jpeg");
-                background-position: 50% 40%;
-                
-                transition: .4s;
-            }
-
-                .cover--bgImage--after {
-                    filter: brightness(25%);
-                }
-
-            .cover--text {
-                color: #f9fafb;
-
-                margin-bottom: 10vh;
-                
-                display: grid;
-                place-items: center;
-            }
-            
-                .cover--text h1 {
-                    font-size: min(10vw, 144px);
-                }
-
-                .cover--text h3 {
-                    letter-spacing: .35rem;
-                    font-size: 1.25vw; /*18px*/
-                    text-align: center;
-                }
-
-                
-        .delimitation--svg {
-            position: absolute;
-            top: 92vh;
-
-            z-index: -1;
-        }
-
-
-
+    
         .description--container {
             height: 100vh;
             min-height: 60vh;
@@ -186,7 +130,7 @@ body {
             width: 100%;
 
             position: absolute;
-            top: 132.5vh;
+            top: 212.5vh;
 
             z-index: -1;
 
@@ -203,11 +147,7 @@ body {
             grid-gap: 1.5rem;
         }
 
-            @media screen and (max-width: 700px) {
-                .description--content--cards {
-                    grid-template: repeat(3, 1fr) / none;
-                }
-            }
+            
 
             .card--container {
                 width: 100%;
@@ -251,15 +191,15 @@ body {
                     }
 
                         .card--one {
-                            background-image: url("../images/project-images/drawcula.png");
+                            background-image: url("../../images/project-images/drawcula.png");
                         }
 
                         .card--two {
-                            background-image: url("../images/project-images/todo.png");
+                            background-image: url("../../images/project-images/todo.png");
                         }
 
                         .card--three {
-                            background-image: url("../images/project-images/rgb-to-hex.png");
+                            background-image: url("../../images/project-images/rgb-to-hex.png");
                         }
 
                     .currently-in-development {
@@ -328,4 +268,112 @@ body {
 
             .description--content--button:hover i {
                 margin-left: .8rem;
+            }
+
+
+
+
+    
+            /*@media screen and (max-width: 600px) {
+                .card {
+                    height: 20rem;
+                }
+            }*/
+
+            @media screen and (min-width: 1250px) {
+                .card--info--link {
+                    display: flex;
+                }
+
+                .description--content--rectangle {
+                    height: 3vh;
+        
+                    position: absolute;
+                    top: 205.5vh;
+
+                    z-index: 3;
+                }
+            }
+
+            @media screen and (max-width: 1250px) {
+                .card--info {
+                    padding-top: 2px;
+                }
+
+                .description--content--rectangle {
+                    height: 3vh;
+        
+                    position: absolute;
+                    top: 205.5vh;
+
+                    z-index: -1;
+                }
+            }
+
+            @media screen and (max-width: 1050px) {
+                .description--content--cards {
+                    grid-gap: 3px;
+                }
+
+                .card--info--link {
+                    display: none;
+                }                
+            }
+
+            @media screen and (max-width: 800px) {
+                .description--content--one--text {
+                    height: 65rem;
+                }
+
+                    .description--content--one--textAndCaption {
+                        height: 10%;
+                    }
+
+                    .description--content--cards {
+                        grid-template: repeat(3, 1fr) / none;
+
+                        height: 85%;
+                    }
+
+                        .card {
+                            height: 17rem;
+                        }
+
+                            .card--info {
+                                padding-top: .8rem;
+                            }
+
+                                .card--info--link {
+                                    display: flex;
+                                }
+
+
+                .description--content--rectangle {
+                    height: 3vh;
+        
+                    position: absolute;
+                    top: 165vh;
+
+                    z-index: -1;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .description--content--one--text {
+                    height: 75rem;
+                }
+
+                .card {
+                    height: 20rem;
+                }
+
+                
+                .description--content--rectangle {
+                    height: 3vh;
+        
+                    position: absolute;
+                    top: 160.5vh;
+
+                    z-index: -1;
+                }
             }
