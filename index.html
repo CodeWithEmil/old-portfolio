@@ -3,15 +3,10 @@
         <head>
             <title>Emilio Nájera — Web Developer, Content Creator, Guitarist</title>
 
-            <link rel = "shortcut icon" href = "./images/shortcut-icon-5.png">
+            <link rel = "shortcut icon" href = "favicon.ico">
 
-            <link rel = "stylesheet" href = "css/common/general.css">
-            <link rel = "stylesheet" href = "css/common/responsive.css">
-            <link rel = "stylesheet" href = "css/common/navbar.css">
-
-            <link rel = "stylesheet" href = "css/structure/structure.css">
-            <link rel = "stylesheet" href = "css/structure/cover/cover.css">
-            <link rel = "stylesheet" href = "css/structure/body/me.css">
+            <!--Using Sass-->
+            <link rel = "stylesheet" href = "css/general.css">
 
             <script src="https://kit.fontawesome.com/b1a0b78bd7.js" crossorigin="anonymous"></script>
 
@@ -128,13 +123,13 @@
 
                         <div class = "description--content">
 
-                            <div class = "description--content--one">
+                            <div class = "description--content--container">
                                 <svg style = "transform: rotate(180deg)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id = "description--content--one--svg--one"><path class = "description--content--one--svg--one" fill="#e7e7e7" fill-opacity="1" d="M0,32L1440,128L1440,0L0,0Z"></path></svg>
 
                                 <div class = "description--content--rectangle"></div>
 
-                                <div class = "description--content--one--text">
-                                    <div class = "description--content--one--textAndCaption">
+                                <div class = "description--content--text">
+                                    <div class = "description--content--info">
                                         <h1>Featured Projects</h1>
                                         <p>I believe that hard work pays off. Here are some of my popular works.</p>
                                     </div>
@@ -157,22 +152,24 @@
                                         </div>
 
                                         <div class="card--container">
-                                            <a class = "card" href = "https://emil-todo.netlify.app/" target = "_blank" rel = "noopener noreferrer">
+                                            <a class = "card second--element" href = "https://soundifyy.netlify.app/" target = "_blank" rel = "noopener noreferrer">
                                                 <div class = "card--bgImage card--two">
                                                 </div>
                                                 <div class = "card--info">
                                                     <div class = "card--info--text">
-                                                        <h2>ToDo App</h2>
-                                                        <p>Never forget something again with this amazing ToDo App! Customize and categorize your ToDo's & Lists.</p>
+                                                        <!--<h2>ToDo App</h2>
+                                                        <p>Never forget something again with this amazing ToDo App! Customize and categorize your ToDo's & Lists.</p>-->
+                                                        <h2>Soundify (Beta)</h2>
+                                                        <p>Get a better sense of life with Soundify. 16 sounds, endless combinations. Just. Relax.</p>
                                                     </div>
 
-                                                    <div class = "card--info--link">emil-todo.netlify.app<i class="fas fa-link"></i></div>
+                                                    <div class = "card--info--link"><span>soundifyy.netlify.app</span><i class="fas fa-link"></i></div>
                                                 </div>
                                             </a>
                                         </div>
 
                                         <div class="card--container currently-in-development">
-                                            <a class = "card" target = "_blank" rel = "noopener noreferrer">
+                                            <a class = "card third--element" target = "_blank" rel = "noopener noreferrer">
                                                 <div class = "card--bgImage card--three">
                                                 </div>
                                                 <div class = "card--info">
@@ -181,7 +178,7 @@
                                                         <p>Have you ever written something in RGB and want to pass it to Hex? No worries. RGB to Hex is a tool...</p>
                                                     </div>
 
-                                                    <div class = "card--info--link">Currently in development 🤒</div>
+                                                    <div class = "card--info--link"><span>Currently in development</span></div>
                                                 </div>
                                             </a>
                                         </div>

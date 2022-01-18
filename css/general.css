@@ -1,0 +1,654 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic");
+/*
+
+    Nothing is Responsive. Will be in a few versions!
+
+*/
+:root {
+  --iconBg: #ececec;
+  --iconBorder: rgba(0, 0, 0, 0.226);
+}
+
+.closure {
+  position: absolute;
+  min-height: 400%;
+  width: 100%;
+  border: solid orange;
+  background-color: #0000008f;
+  z-index: 3;
+  pointer-events: none;
+  display: none;
+  transition: background 0.4s;
+}
+
+input#menu {
+  display: none;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  padding: 16px;
+  margin-left: 2px;
+  background: #FFF;
+  display: block;
+  cursor: pointer;
+}
+
+label.icon {
+  position: fixed;
+  z-index: 200;
+}
+
+.icon .menu,
+.icon .menu::before,
+.icon .menu::after {
+  content: "";
+  height: 2px;
+  width: 20px;
+  background: #9FB1BD;
+  display: block;
+  position: absolute;
+  transition: background ease 0.3s, top ease 0.3s 0.3s, transform ease 0.3s;
+}
+
+#menu:checked + .icon .menu::after {
+  transform: rotate(-45deg);
+}
+
+#menu:checked + .icon .menu::before,
+#menu:checked + .icon .menu::after {
+  top: 0;
+  transition: top ease 0.3s, transform ease 0.3s 0.3s;
+}
+
+nav {
+  height: 100vh;
+  width: 4.166vw;
+  /*60px*/
+  /* 3.75rem*/
+  min-width: 3.75rem;
+  background-color: #FFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+  position: fixed;
+  transition: all ease 0.6s;
+  z-index: 100;
+  overflow: hidden;
+}
+
+main {
+  width: 95.834vw;
+  transition: width ease 0.6s;
+}
+
+#menu:checked ~ nav {
+  width: 12.5rem;
+  /*200px*/
+}
+
+#menu:checked ~ main {
+  width: calc(100vw - 12.5rem);
+}
+
+#menu:checked + .icon .menu {
+  background: transparent;
+}
+
+#menu:checked + .icon .menu::before {
+  transform: rotate(45deg);
+}
+
+.icon:hover .menu,
+.icon:hover .menu::before,
+.icon:hover .menu::after {
+  background: #FC5185;
+}
+
+.icon .menu {
+  top: 27px;
+  left: 18px;
+}
+
+.icon .menu::before {
+  top: -6px;
+}
+
+.icon .menu::after {
+  top: 6px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li, nav a {
+  cursor: pointer;
+  display: block;
+  line-height: 60px;
+  padding-left: 16px;
+  white-space: nowrap;
+}
+
+nav li:hover, nav a:hover {
+  color: #fff;
+  background: #FC5185;
+}
+
+nav li:hover i, nav a:hover i, nav a:visited:hover {
+  color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: #000;
+}
+
+nav i {
+  font-size: 2.5vh;
+  color: #9FB1BD;
+  margin-right: 25px;
+  vertical-align: text-bottom;
+}
+
+.iconContainer {
+  border: 3px solid transparent;
+}
+
+.toggleContainer {
+  height: 7.5vh;
+  display: grid;
+  place-items: center;
+}
+
+.toggle {
+  height: 75%;
+  width: 75%;
+  background: var(--iconBg);
+  border-style: solid;
+  border-width: 2.5px;
+  border-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.4s;
+}
+
+.toggle:hover {
+  border-color: var(--iconBorder);
+}
+
+#menu:checked ~ nav div div {
+  width: 85%;
+}
+
+.toggle i {
+  margin-right: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 500px) {
+  #menu:checked ~ nav {
+    box-shadow: rgba(17, 12, 46, 0.596) 0 0px 100px 0;
+  }
+
+  #menu:checked ~ main {
+    width: 97%;
+  }
+
+  #menu:checked ~ .closure {
+    display: flex;
+    pointer-events: all;
+  }
+}
+@media screen and (max-width: 320px) {
+  .menu {
+    background-color: #9FB1BD;
+    position: fixed;
+  }
+
+  .icon .menu, .icon .menu::before, .icon .menu::after {
+    background: #ececec;
+  }
+
+  nav {
+    display: none;
+    position: fixed;
+  }
+
+  main {
+    width: 100%;
+    border: solid red;
+  }
+
+  #menu:checked ~ main {
+    width: 100%;
+  }
+
+  #menu:checked ~ nav {
+    display: flex;
+  }
+}
+/*Structure*/
+/*Cover*/
+@media screen and (max-width: 700px) {
+  .cover--bgImage {
+    height: 90vh;
+  }
+
+  .cover--text h3 {
+    width: 50vw;
+    font-size: 10px;
+  }
+}
+:root {
+  --generalBg: #f9fafb;
+  --grayBg: #e7e7e7;
+  --textColor: color: #040d21;
+  --lighterColor: color: #222;
+}
+
+.me--container {
+  border: solid red;
+  color: var(--textColor);
+  height: 80vh;
+  min-height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.me--layout {
+  border: solid plum;
+  height: 100%;
+  width: 62%;
+}
+
+.me--info {
+  border: solid orange;
+}
+
+.me--image {
+  border: solid brown;
+}
+
+.cover {
+  min-height: 110vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.cover--bgImage {
+  z-index: -1;
+  position: absolute;
+  height: 125vh;
+  width: 100%;
+  filter: brightness(50%);
+  background-image: url("../../../images/golden-gate/golden-gate.jpeg");
+  background-position: 50% 40%;
+  transition: 0.4s;
+}
+
+.cover--bgImage--after {
+  filter: brightness(25%);
+}
+
+.cover--text {
+  color: #f9fafb;
+  margin-bottom: 10vh;
+  display: grid;
+  place-items: center;
+}
+
+.cover--text h1 {
+  font-size: min(10vw, 144px);
+}
+
+.cover--text h3 {
+  letter-spacing: 0.35rem;
+  font-size: 1.25vw;
+  /*18px*/
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .cover--text h3 {
+    display: none;
+  }
+}
+.delimitation--svg {
+  position: absolute;
+  top: 92vh;
+  z-index: -1;
+}
+
+/*
+    Variables and root selector
+*/
+:root {
+  --generalBg: #f9fafb;
+  --grayBg: #e7e7e7;
+  --textColor: color: #040d21;
+  --lighterColor: color: #222;
+}
+
+/*
+    Keyframes and animations
+*/
+@keyframes cid {
+  0% {
+    transform: translate(0% 0%);
+  }
+  20% {
+    transform: translate(0% 5%);
+  }
+  40% {
+    transform: translate(0% -5%);
+  }
+  60% {
+    transform: translate(0% 2%);
+  }
+  80% {
+    transform: translate(0% -2%);
+  }
+  100% {
+    transform: translate(0% 0%);
+  }
+}
+/*
+    Actual Styles :/
+*/
+body {
+  background: var(--generalBg);
+  transition: 0.4s;
+}
+
+svg path {
+  transition: 0.4s;
+}
+
+.delimitation {
+  border: solid lime;
+  position: absolute;
+  z-index: 4;
+  width: 62%;
+  height: 100%;
+  right: 18.1vw;
+  pointer-events: none;
+}
+
+.mainBody {
+  height: 100vh;
+  width: 95.834vw;
+  position: absolute;
+  right: 0;
+}
+
+.description--container {
+  height: 100vh;
+  min-height: 60vh;
+  width: 100%;
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.description--content--text {
+  height: 32rem;
+  width: 100%;
+  background: var(--grayBg);
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.description--content--text .description--content--info {
+  border: solid 4px var(--grayBg);
+  transition: border 0.4s;
+  height: 19%;
+  width: 62%;
+  /*58.9vw, 62%;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.description--content--text .description--content--info p {
+  color: var(--lighterColor);
+  font-weight: 350;
+  transition: 0.4s;
+}
+
+.description--content--rectangle {
+  height: 3vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background: var(--grayBg);
+  transition: 0.4s;
+}
+
+.description--content--cards {
+  width: 62%;
+  height: 70%;
+  display: grid;
+  grid-template: none/repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+.description--content--cards .card--container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.description--content--cards .card--container .card {
+  border: solid transparent;
+  width: 95%;
+  height: 90%;
+  text-decoration: none;
+  background: #f9fafb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.description--content--cards .card--container .card .card--bgImage {
+  border: solid transparent;
+  height: 35%;
+  width: 90%;
+  background-repeat: none;
+  background-size: 80%;
+  background-position: 50% 50%;
+  border-radius: 8px;
+}
+.description--content--cards .card--container .card .card--one {
+  background-image: url("../../images/project-images/drawcula.png");
+}
+.description--content--cards .card--container .card .card--two {
+  background-image: url("../../images/project-images/soundify.png");
+  background-size: 100%;
+}
+.description--content--cards .card--container .card .card--three {
+  background-image: url("../../images/project-images/rgb-to-hex.png");
+}
+.description--content--cards .card--container .card .card--info {
+  border: solid transparent;
+  height: 60%;
+  width: 90%;
+  padding-top: 0.8rem;
+  padding-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.description--content--cards .card--container .card .card--info .card--info--text {
+  height: 70%;
+}
+.description--content--cards .card--container .card .card--info .card--info--text h2 {
+  color: #040d21;
+  margin-bottom: 1vh;
+}
+.description--content--cards .card--container .card .card--info .card--info--text p {
+  color: #222;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+.description--content--cards .card--container .card .card--info .card--info--link {
+  color: #4169e1;
+  font-size: 0.9rem;
+}
+.description--content--cards .card--container .card .card--info .card--info--link i {
+  margin-left: 0.5rem;
+}
+.description--content--cards .card--container .card:hover {
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  transform: rotate(2deg);
+}
+.description--content--cards .card--container .second--element .card--info .card--info--link span::after {
+  content: " (Beta)";
+}
+.description--content--cards .card--container .third--element .card--info .card--info--link span::after {
+  content: " 🤒";
+}
+.description--content--cards .currently-in-development {
+  transition: 0.4s;
+}
+.description--content--cards .currently-in-development:hover {
+  filter: brightness(70%);
+}
+
+.description--content--button {
+  width: 62%;
+  color: var(--lighterColor);
+  text-decoration: none;
+  transition: 0.4s;
+}
+.description--content--button i {
+  margin-left: 0.5rem;
+  transition: margin-left 0.4s;
+}
+
+.description--content--button:hover i {
+  margin-left: 0.8rem;
+}
+
+/*@media screen and (max-width: 600px) {
+    .card {
+        height: 20rem;
+    }
+}*/
+@media screen and (min-width: 1250px) {
+  .card--info--link {
+    display: flex;
+  }
+
+  .description--content--rectangle {
+    height: 3vh;
+    position: absolute;
+    z-index: 3;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .card--info {
+    padding-top: 2px;
+  }
+
+  .description--content--rectangle {
+    height: 3vh;
+    position: absolute;
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .description--content--cards {
+    grid-gap: 3px;
+  }
+
+  .card--info--link {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .description--content--text {
+    height: 80rem;
+    border: solid red;
+  }
+  .description--content--text .description--content--info {
+    height: 15%;
+  }
+  .description--content--text .description--content--cards {
+    grid-template: repeat(3, 1fr)/none;
+    height: 85%;
+  }
+  .description--content--text .description--content--cards .card {
+    height: 20rem;
+  }
+  .description--content--text .description--content--cards .card .card--info {
+    padding-top: 0.8rem;
+  }
+  .description--content--text .description--content--cards .card .card--info .card--info--link {
+    display: flex;
+  }
+
+  .description--content--rectangle {
+    height: 3vh;
+    position: absolute;
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .description--content--text {
+    height: 80rem;
+  }
+
+  .description--content--cards .card--container .card {
+    height: clapm(15rem, 20rem, 25rem);
+  }
+  .description--content--cards .card--container .second--element .card--info .card--info--link span::after {
+    content: "";
+  }
+  .description--content--cards .card--container .third--element .card--info .card--info--link span::after {
+    content: "";
+  }
+
+  .description--content--rectangle {
+    height: 3vh;
+    position: absolute;
+    z-index: -1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.invisible--div {
+  pointer-events: none;
+  user-select: none;
+  filter: opacity(0);
+}
+
+.invisible--div h1 {
+  font-size: 5rem;
+}
+
+/*# sourceMappingURL=general.css.map */
