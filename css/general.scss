@@ -3,6 +3,9 @@
     @use "./common/navbar";
     @use "./common/responsive";
 
+    //Functional Modules
+    @use "./common/card";
+
     //Specific Modules
     @use "./structure/body/me";
     @use "./structure/cover/cover";
@@ -24,8 +27,31 @@
     pointer-events: none;
     user-select: none;
     filter: opacity(0);
-}
 
-    .invisible--div h1 {
+    h1 {
         font-size: 5rem;
     }
+}
+
+
+.mainBody {
+    height: 100vh;
+    width: calc(100vw - 4.166vw);
+
+    position: absolute;
+    right: 0;
+    
+
+}
+
+.delimitation {
+    border: solid lime;
+
+    position: absolute;
+    z-index: 4;
+    width: 62%;
+    height: 100%;
+    right: 18.1vw;
+
+    pointer-events: none;
+}

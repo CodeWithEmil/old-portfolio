@@ -28,7 +28,7 @@ let body = document.querySelector("body");
         if (clicked) {
             //Declaring Variables for general backgrounds
                 set("generalBg", lighterWhite);
-                set("grayBg", darkerWhiteBg);
+                set("grayBg", darkerWhite);
                 
                 //Color of elements:
                 set("textColor", "#040d21");
@@ -73,8 +73,8 @@ let body = document.querySelector("body");
     function svgDescriptionStyles(addingOrRemoving) {
         //True is adding, False is removing
         if(addingOrRemoving) {
-            svgDescriptionOne.setAttribute("fill", darkerWhiteBg);
-            svgDescriptionTwo.setAttribute("fill", darkerWhiteBg);
+            svgDescriptionOne.setAttribute("fill", darkerWhite);
+            svgDescriptionTwo.setAttribute("fill", darkerWhite);
         } else if (!addingOrRemoving) {
             svgDescriptionOne.setAttribute("fill", lighterGray);
             svgDescriptionTwo.setAttribute("fill", lighterGray);

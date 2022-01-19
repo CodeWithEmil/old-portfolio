@@ -257,26 +257,31 @@ nav i {
 .me--container {
   border: solid red;
   color: var(--textColor);
-  height: 80vh;
-  min-height: 60vh;
+  height: 65vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
-
-.me--layout {
+.me--container .me--layout {
   border: solid plum;
   height: 100%;
   width: 62%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-
-.me--info {
+.me--container .me--layout .me--info {
+  border: solid navy;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.me--container .me--layout .me--info .me--title {
+  border: solid blue;
+}
+.me--container .me--layout .me--info .me--links {
   border: solid orange;
+  height: 50%;
 }
-
-.me--image {
+.me--container .me--layout .me--image {
   border: solid brown;
 }
 
@@ -336,7 +341,7 @@ nav i {
 */
 :root {
   --generalBg: #f9fafb;
-  --grayBg: #e7e7e7;
+  --grayBg: #ececec;
   --textColor: color: #040d21;
   --lighterColor: color: #222;
 }
@@ -376,23 +381,6 @@ svg path {
   transition: 0.4s;
 }
 
-.delimitation {
-  border: solid lime;
-  position: absolute;
-  z-index: 4;
-  width: 62%;
-  height: 100%;
-  right: 18.1vw;
-  pointer-events: none;
-}
-
-.mainBody {
-  height: 100vh;
-  width: 95.834vw;
-  position: absolute;
-  right: 0;
-}
-
 .description--container {
   height: 100vh;
   min-height: 60vh;
@@ -403,9 +391,19 @@ svg path {
   justify-content: space-around;
   align-items: stretch;
 }
-
-.description--content--text {
-  height: 32rem;
+.description--container .description--content .description--content--container .description--content--rectangle {
+  height: 3vh;
+  width: 100%;
+  position: absolute;
+  margin-top: -1rem;
+  z-index: -3;
+  pointer-events: none;
+  user-select: none;
+  background: var(--grayBg);
+  transition: 0.4s;
+}
+.description--container .description--content .description--content--container .description--content--text {
+  height: 35rem;
   width: 100%;
   background: var(--grayBg);
   transition: 0.4s;
@@ -414,7 +412,8 @@ svg path {
   justify-content: space-around;
   align-items: center;
 }
-.description--content--text .description--content--info {
+.description--container .description--content .description--content--container .description--content--text .description--content--info {
+  border: solid blueviolet;
   border: solid 4px var(--grayBg);
   transition: border 0.4s;
   height: 19%;
@@ -425,34 +424,24 @@ svg path {
   justify-content: space-evenly;
   align-items: flex-start;
 }
-.description--content--text .description--content--info p {
+.description--container .description--content .description--content--container .description--content--text .description--content--info p {
   color: var(--lighterColor);
   font-weight: 350;
   transition: 0.4s;
 }
-
-.description--content--rectangle {
-  height: 3vh;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  background: var(--grayBg);
-  transition: 0.4s;
-}
-
-.description--content--cards {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards {
   width: 62%;
   height: 70%;
   display: grid;
   grid-template: none/repeat(3, 1fr);
   grid-gap: 1.5rem;
 }
-.description--content--cards .card--container {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container {
   width: 100%;
   display: grid;
   place-items: center;
 }
-.description--content--cards .card--container .card {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card {
   border: solid transparent;
   width: 95%;
   height: 90%;
@@ -466,7 +455,7 @@ svg path {
   justify-content: center;
   align-items: center;
 }
-.description--content--cards .card--container .card .card--bgImage {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--bgImage {
   border: solid transparent;
   height: 35%;
   width: 90%;
@@ -475,17 +464,17 @@ svg path {
   background-position: 50% 50%;
   border-radius: 8px;
 }
-.description--content--cards .card--container .card .card--one {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--one {
   background-image: url("../../images/project-images/drawcula.png");
 }
-.description--content--cards .card--container .card .card--two {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--two {
   background-image: url("../../images/project-images/soundify.png");
   background-size: 100%;
 }
-.description--content--cards .card--container .card .card--three {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--three {
   background-image: url("../../images/project-images/rgb-to-hex.png");
 }
-.description--content--cards .card--container .card .card--info {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--info {
   border: solid transparent;
   height: 60%;
   width: 90%;
@@ -496,72 +485,64 @@ svg path {
   justify-content: space-around;
   align-items: flex-start;
 }
-.description--content--cards .card--container .card .card--info .card--info--text {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--info .card--info--text {
   height: 70%;
 }
-.description--content--cards .card--container .card .card--info .card--info--text h2 {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--info .card--info--text h2 {
   color: #040d21;
   margin-bottom: 1vh;
 }
-.description--content--cards .card--container .card .card--info .card--info--text p {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--info .card--info--text p {
   color: #222;
   font-weight: 400;
   font-size: 0.9rem;
   text-align: justify;
 }
-.description--content--cards .card--container .card .card--info .card--info--link {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--info .card--info--link {
   color: #4169e1;
   font-size: 0.9rem;
 }
-.description--content--cards .card--container .card .card--info .card--info--link i {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card .card--info .card--info--link i {
   margin-left: 0.5rem;
 }
-.description--content--cards .card--container .card:hover {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card:hover {
   box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
   transform: rotate(2deg);
 }
-.description--content--cards .card--container .second--element .card--info .card--info--link span::after {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .second--element .card--info .card--info--link span::after {
   content: " (Beta)";
 }
-.description--content--cards .card--container .third--element .card--info .card--info--link span::after {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .third--element .card--info .card--info--link span::after {
   content: " 🤒";
 }
-.description--content--cards .currently-in-development {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .currently-in-development {
   transition: 0.4s;
 }
-.description--content--cards .currently-in-development:hover {
+.description--container .description--content .description--content--container .description--content--text .description--content--cards .currently-in-development:hover {
   filter: brightness(70%);
 }
-
-.description--content--button {
+.description--container .description--content .description--content--container .description--content--text .description--content--button {
   width: 62%;
   color: var(--lighterColor);
   text-decoration: none;
   transition: 0.4s;
 }
-.description--content--button i {
+.description--container .description--content .description--content--container .description--content--text .description--content--button i {
   margin-left: 0.5rem;
   transition: margin-left 0.4s;
 }
-
-.description--content--button:hover i {
+.description--container .description--content .description--content--container .description--content--text .description--content--button:hover i {
   margin-left: 0.8rem;
 }
 
-/*@media screen and (max-width: 600px) {
-    .card {
-        height: 20rem;
-    }
-}*/
 @media screen and (min-width: 1250px) {
-  .card--info--link {
-    display: flex;
-  }
-
-  .description--content--rectangle {
+  .description--container .description--content .description--content--container .description--content--rectangle {
     height: 3vh;
     position: absolute;
-    z-index: 3;
+    z-index: -3;
+  }
+  .description--container .description--content .description--content--container .description--content--text .description--content--cards .card .card--info .card--info--link {
+    display: flex;
   }
 }
 @media screen and (max-width: 1250px) {
@@ -585,49 +566,49 @@ svg path {
   }
 }
 @media screen and (max-width: 800px) {
-  .description--content--text {
+  .description--container .description--content .description--content--container .description--content--text {
     height: 80rem;
-    border: solid red;
   }
-  .description--content--text .description--content--info {
+  .description--container .description--content .description--content--container .description--content--text .description--content--info {
     height: 15%;
   }
-  .description--content--text .description--content--cards {
+  .description--container .description--content .description--content--container .description--content--text .description--content--cards {
     grid-template: repeat(3, 1fr)/none;
     height: 85%;
   }
-  .description--content--text .description--content--cards .card {
+  .description--container .description--content .description--content--container .description--content--text .description--content--cards .card {
     height: 20rem;
   }
-  .description--content--text .description--content--cards .card .card--info {
+  .description--container .description--content .description--content--container .description--content--text .description--content--cards .card .card--info {
     padding-top: 0.8rem;
   }
-  .description--content--text .description--content--cards .card .card--info .card--info--link {
+  .description--container .description--content .description--content--container .description--content--text .description--content--cards .card .card--info .card--info--link {
     display: flex;
   }
-
-  .description--content--rectangle {
+  .description--container .description--content .description--content--container .description--content--text .description--content--button {
+    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .description--container .description--content .description--content--container .description--content--rectangle {
     height: 3vh;
     position: absolute;
     z-index: -1;
   }
 }
 @media screen and (max-width: 600px) {
-  .description--content--text {
+  .description--container .description--content .description--content--container .description--content--text {
     height: 80rem;
   }
-
-  .description--content--cards .card--container .card {
-    height: clapm(15rem, 20rem, 25rem);
+  .description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card {
+    height: 20rem;
   }
-  .description--content--cards .card--container .second--element .card--info .card--info--link span::after {
+  .description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .second--element .card--info .card--info--link span::after {
     content: "";
   }
-  .description--content--cards .card--container .third--element .card--info .card--info--link span::after {
+  .description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .third--element .card--info .card--info--link span::after {
     content: "";
   }
-
-  .description--content--rectangle {
+  .description--container .description--content .description--content--container .description--content--rectangle {
     height: 3vh;
     position: absolute;
     z-index: -1;
@@ -646,9 +627,25 @@ svg path {
   user-select: none;
   filter: opacity(0);
 }
-
 .invisible--div h1 {
   font-size: 5rem;
+}
+
+.mainBody {
+  height: 100vh;
+  width: 95.834vw;
+  position: absolute;
+  right: 0;
+}
+
+.delimitation {
+  border: solid lime;
+  position: absolute;
+  z-index: 4;
+  width: 62%;
+  height: 100%;
+  right: 18.1vw;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=general.css.map */
