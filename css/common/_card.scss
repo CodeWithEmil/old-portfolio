@@ -1,0 +1,102 @@
+:root {
+    --generalBg: #f9fafb;
+    --grayBg: #e7e7e7;
+
+    --textColor: color: #040d21;
+    --lighterColor: color: #222;
+}
+
+.wrap {
+    /*margin-top: 2rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;*/
+
+    transform-style: preserve-3d;
+    transform: perspective(100rem);
+    cursor: pointer;
+
+    //background: var(--grayBg);
+
+    .wrap--container {
+        --rX: 0;
+        --rY: 0;
+        --bX: 50%;
+        --bY: 80%;
+
+        //height: 16rem;
+        //width: 10rem;
+        height: 100%;
+        width: 100%;
+
+        position: relative;
+        padding: 4rem;
+
+        border-radius: 25px;
+
+        background-image: url("../../images/me/me-four.png");
+        background-position: var(--bX) var(--bY);
+        background-size: 30rem auto;
+        
+        transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+        transition: all .25s;
+
+        display: flex;
+        align-items: flex-end;
+
+        p {
+            color: hsla(0, 0%, 100%, .6);
+            font-size: 2.2rem;
+        }
+    }
+
+    .wrap--container:hover {
+        box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+    }
+
+    .wrap--container::before, .wrap--container::after {
+        content: "";
+        width: 2rem;
+        height: 2rem;
+
+        border: 1px solid #ebebeb;
+        position: absolute;
+
+        opacity: .3;
+        z-index: 2;
+
+        transition: .3s;
+    }
+
+    .wrap--container::before {
+        top: 2rem;
+        right: 2rem;
+        border-bottom-width: 0;
+        border-left-width: 0;
+    }
+    .wrap--container::after {
+        bottom: 2rem;
+        left: 2rem;
+        border-top-width: 0;
+        border-right-width: 0;
+    }
+}
+
+.wrap:hover {
+    .wrap--container::before, .wrap--container::after {
+        height: calc(100% - 4rem);
+        width: calc(100% - 4rem);
+    }
+}
+
+.abs-site-link {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    color: hsla(0, 0%, 0%, .6);
+    font-size: 1.6rem;
+}
+
+.containerActive {
+    transition: none;
+}

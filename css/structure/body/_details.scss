@@ -90,10 +90,10 @@ body {
             }
 
             .description--content--text {        
-                height: 35rem;
+                height: 36rem;
                 width: 100%;
 
-                //padding-bottom: 3rem;
+                //Just in case we switched forms again: padding-bottom: 3rem;
         
                 background: var(--grayBg);
         
@@ -166,7 +166,7 @@ body {
                                 width: 90%;
             
                                 background-repeat: none;
-                                background-size: 80%;
+                                background-size: 100%;
                                 background-position: 50% 50%;
                                 border-radius: 8px;
                             }
@@ -349,7 +349,7 @@ body {
     }                
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .description--container {
         .description--content {
             .description--content--container {
