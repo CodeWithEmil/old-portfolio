@@ -231,7 +231,7 @@ body {
                         //Card Extra styles
                         .card:hover {
                             box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
-                            transform: rotate(2deg);
+                            transform: rotate(2deg) translateY(-0.5%);
                         }
             
                         //Icons and emojis at the end of each one of the featured projects

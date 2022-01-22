@@ -13,6 +13,8 @@
     height: clamp(60vh, 65vh, 70vh);
     width: 100%;
 
+    margin-top: 1rem;
+
     display: grid;
     place-items: center;
     
@@ -21,7 +23,8 @@
         height: 100%;
         width: 62%;
 
-        padding-top: 2rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
         padding-left: 3rem;
         padding-bottom: 2rem;
         
@@ -30,7 +33,9 @@
 
         .me--info {
             border: solid navy;
-            height: 60%;
+            height: 75%;
+
+            margin-right: 1rem;
 
             align-self: center;
 
@@ -39,27 +44,62 @@
 
             .me--title {
                 border: solid blue;
+
+                transition: .4s;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+
+                h1 {
+                    border: solid cyan;
+                    font-size: clamp(2.5rem, 2.8rem, 3rem);
+
+                    /*span {
+                        font-weight: lighter;
+                    }*/
+                }
+
+                p {
+                    font-size: clamp(1rem, 1.2rem, 2rem)
+                }
             }
 
             .me--caption {
+                height: 80%;
+                width: 80%;
+
                 border: solid lime;
+                transition: .4s;
+
+                align-self: center;
+                color: var(--lighterColor);
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
 
             .me--links {
                 border: solid orange;
-                height: 100%;
-                width: 60%;
+                height: 75%;
+                width: 90%;
 
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
+                grid-gap: 1rem;
 
                 a {
                     height: 100%;
                     width: 100%;
                     border: solid violet;
 
-                    color: #040d21;
+                    color: var(--lighterColor);
+                    background: var(--grayBg);
                     text-decoration: none;
+                    border-radius: 8px;
 
                     display: grid;
                     place-items: center;
@@ -68,22 +108,65 @@
 
                     i {
                         font-size: clamp(1rem, 1.5rem, 2rem);
-                        transition: inherit;
+                        border: solid brown;
+                        pointer-events: none;
+
+                        transition: .1s;
                     }
                 }
                 
                 a:hover {
-                    transform: rotate(10deg);
+                    transform: rotate(5deg) translateY(-5%);
 
+                    color: var(--textColor);
+                }
+
+                //Selecting specific anchor elements with pseudo-classes
+                /*a:nth-child(1):hover {
                     i {
-                        font-size: clamp(1.2rem, 1.7rem, 2.2rem);
+                        color: #c225a0;
+                        text-shadow: 0 0 30px #c225a0;
+                        border-color: #c225a0;
                     }
                 }
+
+                a:nth-child(2):hover {
+                    i {
+                        color: #179df0;
+                        text-shadow: 0 0 30px #179df0;
+                        border-color: #179df0;
+                    }
+                }
+
+                a:nth-child(3):hover {
+                    i {
+                        color: #25d366;
+                        text-shadow: 0 0 30px #25d366;
+                        border-color: #25d366;
+                    }
+                }
+
+                a:nth-child(4):hover {
+                    i {
+                        color: #D61A1A;
+                        text-shadow: 0 0 30px #D61A1A;
+                        border-color: #D61A1A;
+                    }
+                }*/
             }
         }
 
         .me--wrap {
             border: solid brown;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .me--container {
+        .me--layout {
+            grid-template-columns: none;
+            grid-template-rows: repeat(2, 1fr);
         }
     }
 }

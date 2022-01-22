@@ -31,17 +31,17 @@
         
         display: grid;
         place-items: center;
-    }
-    
-        .cover--text h1 {
+
+        h1 {
             font-size: min(10vw, 144px);
         }
 
-        .cover--text h3 {
+        h3 {
             letter-spacing: .35rem;
             font-size: 1.25vw; /*18px*/
             text-align: center;
         }
+    }
 
         @media screen and (max-width: 700px) {
             .cover--text h3 {
@@ -56,3 +56,33 @@
 
     z-index: -1;
 }
+
+    .cover--about--me {
+        height: 5rem;
+        width: fit-content;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: clamp(3rem, 4rem, 5rem);
+
+        color: #d3d3d3;
+        text-decoration: none;
+
+        transition: height .4s;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        p, i {
+            font-size: max(8px, 1rem);
+        }
+    }
+
+    .cover--about--me:hover {
+        //text-decoration: underline;
+        height: 6rem;
+        color: #ececec;
+    }

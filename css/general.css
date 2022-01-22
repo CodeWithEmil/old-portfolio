@@ -355,11 +355,9 @@ nav i {
   display: grid;
   place-items: center;
 }
-
 .cover--text h1 {
   font-size: min(10vw, 144px);
 }
-
 .cover--text h3 {
   letter-spacing: 0.35rem;
   font-size: 1.25vw;
@@ -378,6 +376,30 @@ nav i {
   z-index: -1;
 }
 
+.cover--about--me {
+  height: 5rem;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4rem;
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: height 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cover--about--me p, .cover--about--me i {
+  font-size: max(8px, 1rem);
+}
+
+.cover--about--me:hover {
+  height: 6rem;
+  color: #ececec;
+}
+
 :root {
   --generalBg: #f9fafb;
   --grayBg: #e7e7e7;
@@ -390,6 +412,7 @@ nav i {
   color: var(--textColor);
   height: 65vh;
   width: 100%;
+  margin-top: 1rem;
   display: grid;
   place-items: center;
 }
@@ -397,7 +420,8 @@ nav i {
   border: solid plum;
   height: 100%;
   width: 62%;
-  padding-top: 2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   padding-left: 3rem;
   padding-bottom: 2rem;
   display: grid;
@@ -405,48 +429,112 @@ nav i {
 }
 .me--container .me--layout .me--info {
   border: solid navy;
-  height: 60%;
+  height: 75%;
+  margin-right: 1rem;
   align-self: center;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
 }
 .me--container .me--layout .me--info .me--title {
   border: solid blue;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.me--container .me--layout .me--info .me--title h1 {
+  border: solid cyan;
+  font-size: 2.8rem;
+  /*span {
+      font-weight: lighter;
+  }*/
+}
+.me--container .me--layout .me--info .me--title p {
+  font-size: 1.2rem;
 }
 .me--container .me--layout .me--info .me--caption {
+  height: 80%;
+  width: 80%;
   border: solid lime;
+  transition: 0.4s;
+  align-self: center;
+  color: var(--lighterColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .me--container .me--layout .me--info .me--links {
   border: solid orange;
-  height: 100%;
-  width: 60%;
+  height: 75%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  /*a:nth-child(1):hover {
+      i {
+          color: #c225a0;
+          text-shadow: 0 0 30px #c225a0;
+          border-color: #c225a0;
+      }
+  }
+
+  a:nth-child(2):hover {
+      i {
+          color: #179df0;
+          text-shadow: 0 0 30px #179df0;
+          border-color: #179df0;
+      }
+  }
+
+  a:nth-child(3):hover {
+      i {
+          color: #25d366;
+          text-shadow: 0 0 30px #25d366;
+          border-color: #25d366;
+      }
+  }
+
+  a:nth-child(4):hover {
+      i {
+          color: #D61A1A;
+          text-shadow: 0 0 30px #D61A1A;
+          border-color: #D61A1A;
+      }
+  }*/
 }
 .me--container .me--layout .me--info .me--links a {
   height: 100%;
   width: 100%;
   border: solid violet;
-  color: #040d21;
+  color: var(--lighterColor);
+  background: var(--grayBg);
   text-decoration: none;
+  border-radius: 8px;
   display: grid;
   place-items: center;
   transition: 0.4s;
 }
 .me--container .me--layout .me--info .me--links a i {
   font-size: 1.5rem;
-  transition: inherit;
+  border: solid brown;
+  pointer-events: none;
+  transition: 0.1s;
 }
 .me--container .me--layout .me--info .me--links a:hover {
-  transform: rotate(10deg);
-}
-.me--container .me--layout .me--info .me--links a:hover i {
-  font-size: 1.7rem;
+  transform: rotate(5deg) translateY(-5%);
+  color: var(--textColor);
 }
 .me--container .me--layout .me--wrap {
   border: solid brown;
 }
 
+@media screen and (max-width: 850px) {
+  .me--container .me--layout {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
 /*
     Variables and root selector
 */
@@ -618,7 +706,7 @@ svg path {
 }
 .description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .card:hover {
   box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
-  transform: rotate(2deg);
+  transform: rotate(2deg) translateY(-0.5%);
 }
 .description--container .description--content .description--content--container .description--content--text .description--content--cards .card--container .second--element .card--info .card--info--link span::after {
   content: " (Beta)";
