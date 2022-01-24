@@ -35,7 +35,10 @@
 
 
 .mainBody {
-    height: 100vh;
+    //border: solid navy;
+
+    height: fit-content;
+    min-height: 300vh;
     width: calc(100vw - 4.166vw);
 
     position: absolute;

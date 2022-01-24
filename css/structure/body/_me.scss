@@ -7,7 +7,7 @@
 }
 
 .me--container {
-    border: solid red;
+    border: solid transparent; // red;
     color: var(--textColor);
 
     height: clamp(60vh, 65vh, 70vh);
@@ -17,33 +17,40 @@
 
     display: grid;
     place-items: center;
+    justify-content: center;
     
     .me--layout {
-        border: solid plum;
-        height: 100%;
+        border: solid transparent; // plum;
+        height: 90%;
         width: 62%;
 
-        margin-top: 1rem;
         padding-top: 1rem;
-        padding-left: 3rem;
-        padding-bottom: 2rem;
+        //padding-left: 3rem;
+        //padding-bottom: 2rem;
         
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+
+        /*display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;*/
 
         .me--info {
-            border: solid navy;
-            height: 75%;
+            border: solid transparent; // navy;
+            height: 100%;
+            width: 100%;
 
             margin-right: 1rem;
 
-            align-self: center;
+            //align-self: start;
 
             display: grid;
             grid-template-rows: repeat(3, 1fr);
 
             .me--title {
-                border: solid blue;
+                border: solid transparent; // blue;
 
                 transition: .4s;
 
@@ -53,7 +60,7 @@
 
 
                 h1 {
-                    border: solid cyan;
+                    border: solid transparent; // cyan;
                     font-size: clamp(2.5rem, 2.8rem, 3rem);
 
                     /*span {
@@ -62,7 +69,8 @@
                 }
 
                 p {
-                    font-size: clamp(1rem, 1.2rem, 2rem)
+                    font-size: clamp(1rem, 1.2rem, 2rem);
+                    color: #444;
                 }
             }
 
@@ -70,11 +78,11 @@
                 height: 80%;
                 width: 80%;
 
-                border: solid lime;
+                border: solid transparent; // lime;
                 transition: .4s;
 
                 align-self: center;
-                color: var(--lighterColor);
+                color: #444;
 
                 display: flex;
                 flex-direction: column;
@@ -83,9 +91,11 @@
             }
 
             .me--links {
-                border: solid orange;
+                border: solid transparent; // orange;
                 height: 75%;
-                width: 90%;
+                width: 100%;
+
+                z-index: 1;
 
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -94,10 +104,9 @@
                 a {
                     height: 100%;
                     width: 100%;
-                    border: solid violet;
+                    border: var(--generalBg) solid;
 
                     color: var(--lighterColor);
-                    background: var(--grayBg);
                     text-decoration: none;
                     border-radius: 8px;
 
@@ -107,19 +116,136 @@
                     transition: .4s;
 
                     i {
-                        font-size: clamp(1rem, 1.5rem, 2rem);
-                        border: solid brown;
+                        font-size: clamp(1.4rem, 1.6rem, 1.8rem);
+                        border: solid transparent; // transparent; // brown;
                         pointer-events: none;
 
+                        position: absolute;
+                        z-index: 1;
+
                         transition: .1s;
+                    }
+
+                    hr {
+                        width: 1rem;
+                        height: .1rem;
+                        
+                        position: absolute;
+                        border: none;
+                        border-radius: 1rem;
+                        z-index: 2;
+
+                        margin-top: 3rem;
+
+                        transition: .4s;
+                    }
+
+                    div {
+                        height: inherit;
+                        width: inherit;
+
+                        background: var(--grayBg);
+                        border-radius: 4px;
+                        z-index: 0;
+
+                        transition: .4s;
+                    }                    
+                }
+                
+                a:hover {
+                    i {
+                        transform: rotate(-5deg) translateY(5%);
+                    }
+
+                    hr {
+                        filter: opacity(0);
+                    }
+
+                    div {
+                        transform: rotate(-10deg) translateY(5%);
+                        box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+                    }
+                    
+                    transform: rotate(5deg) translateY(-5%);
+                    
+                    color: var(--textColor);
+                    //Add a shadow
+                }
+
+                //Colors
+
+                .instagram {
+                    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+                }
+
+                .twitter {
+                    background: linear-gradient(45deg, #00ffbd, #00e4cd, /*#00c7d6,*/ #00a8d5, #008ac8);
+                }
+
+                .github {
+                    background: linear-gradient(45deg, #25d366, #6ffa1e);
+                }
+
+                .mail {
+                    background: linear-gradient(45deg, #4c3f91, #9145b6,  #ff5677)
+                }
+
+                /* I tried using another div to make the hover effect...
+                a {
+                    height: 100%;
+                    width: 100%;
+                    border: solid transparent; // transparent; // violet;
+
+                    color: var(--lighterColor);
+                    text-decoration: none;
+                    background: var(--grayBg);
+                    border-radius: 8px;
+
+                    padding: none;
+
+                    background: cyan;
+
+                    transition: .4s;
+
+                    div {
+                        border: solid transparent; // transparent; // lime;
+                        height: 100%;
+                        width: 100%;
+
+                        color: var(--lighterColor);
+                        text-decoration: none;
+                        background: var(--grayBg);
+                        border-radius: 8px;
+
+                        transition: .4s;
+
+                        display: grid;
+                        place-items: center;
+
+                        i {
+                            font-size: clamp(1rem, 1.5rem, 2rem);
+                            border: solid transparent; // transparent; // brown;
+                            pointer-events: none;
+    
+                            position: absolute;
+    
+                            transition: .1s;
+                        }
                     }
                 }
                 
                 a:hover {
-                    transform: rotate(5deg) translateY(-5%);
+                    //transform: rotate(5deg) translateY(-5%);
 
                     color: var(--textColor);
+                    //Add a shadow
+
+                    div {
+                        transform: rotate(5deg) translateY(-5%);
+                        color: var(--textColor);
+                    }
                 }
+*/
 
                 //Selecting specific anchor elements with pseudo-classes
                 /*a:nth-child(1):hover {
@@ -157,7 +283,7 @@
         }
 
         .me--wrap {
-            border: solid brown;
+            border: solid transparent; // brown;
         }
     }
 }

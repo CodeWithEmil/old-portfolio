@@ -224,7 +224,6 @@ nav i {
 
   main {
     width: 100%;
-    border: solid red;
   }
 
   #menu:checked ~ main {
@@ -340,7 +339,7 @@ nav i {
   height: 125vh;
   width: 100%;
   filter: brightness(50%);
-  background-image: url("../../../images/golden-gate/golden-gate.jpeg");
+  background-image: url("../../../images/bg/golden-gate.jpeg");
   background-position: 50% 40%;
   transition: 0.4s;
 }
@@ -380,12 +379,12 @@ nav i {
   height: 5rem;
   width: fit-content;
   position: absolute;
-  left: 50%;
   transform: translateX(-50%);
-  bottom: 4rem;
+  left: 50%;
+  top: 40rem;
   color: #d3d3d3;
   text-decoration: none;
-  transition: height 0.4s;
+  transition: 0.4s;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -397,6 +396,7 @@ nav i {
 
 .cover--about--me:hover {
   height: 6rem;
+  top: 39rem;
   color: #ececec;
 }
 
@@ -408,42 +408,45 @@ nav i {
 }
 
 .me--container {
-  border: solid red;
+  border: solid transparent;
   color: var(--textColor);
   height: 65vh;
   width: 100%;
   margin-top: 1rem;
   display: grid;
   place-items: center;
+  justify-content: center;
 }
 .me--container .me--layout {
-  border: solid plum;
-  height: 100%;
+  border: solid transparent;
+  height: 90%;
   width: 62%;
-  margin-top: 1rem;
   padding-top: 1rem;
-  padding-left: 3rem;
-  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  /*display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;*/
 }
 .me--container .me--layout .me--info {
-  border: solid navy;
-  height: 75%;
+  border: solid transparent;
+  height: 100%;
+  width: 100%;
   margin-right: 1rem;
-  align-self: center;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
 }
 .me--container .me--layout .me--info .me--title {
-  border: solid blue;
+  border: solid transparent;
   transition: 0.4s;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 .me--container .me--layout .me--info .me--title h1 {
-  border: solid cyan;
+  border: solid transparent;
   font-size: 2.8rem;
   /*span {
       font-weight: lighter;
@@ -451,26 +454,84 @@ nav i {
 }
 .me--container .me--layout .me--info .me--title p {
   font-size: 1.2rem;
+  color: #444;
 }
 .me--container .me--layout .me--info .me--caption {
   height: 80%;
   width: 80%;
-  border: solid lime;
+  border: solid transparent;
   transition: 0.4s;
   align-self: center;
-  color: var(--lighterColor);
+  color: #444;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .me--container .me--layout .me--info .me--links {
-  border: solid orange;
+  border: solid transparent;
   height: 75%;
-  width: 90%;
+  width: 100%;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
+  /* I tried using another div to make the hover effect...
+                  a {
+                      height: 100%;
+                      width: 100%;
+                      border: solid transparent; // transparent; // violet;
+
+                      color: var(--lighterColor);
+                      text-decoration: none;
+                      background: var(--grayBg);
+                      border-radius: 8px;
+
+                      padding: none;
+
+                      background: cyan;
+
+                      transition: .4s;
+
+                      div {
+                          border: solid transparent; // transparent; // lime;
+                          height: 100%;
+                          width: 100%;
+
+                          color: var(--lighterColor);
+                          text-decoration: none;
+                          background: var(--grayBg);
+                          border-radius: 8px;
+
+                          transition: .4s;
+
+                          display: grid;
+                          place-items: center;
+
+                          i {
+                              font-size: clamp(1rem, 1.5rem, 2rem);
+                              border: solid transparent; // transparent; // brown;
+                              pointer-events: none;
+
+                              position: absolute;
+
+                              transition: .1s;
+                          }
+                      }
+                  }
+
+                  a:hover {
+                      //transform: rotate(5deg) translateY(-5%);
+
+                      color: var(--textColor);
+                      //Add a shadow
+
+                      div {
+                          transform: rotate(5deg) translateY(-5%);
+                          color: var(--textColor);
+                      }
+                  }
+  */
   /*a:nth-child(1):hover {
       i {
           color: #c225a0;
@@ -506,9 +567,8 @@ nav i {
 .me--container .me--layout .me--info .me--links a {
   height: 100%;
   width: 100%;
-  border: solid violet;
+  border: var(--generalBg) solid;
   color: var(--lighterColor);
-  background: var(--grayBg);
   text-decoration: none;
   border-radius: 8px;
   display: grid;
@@ -516,17 +576,59 @@ nav i {
   transition: 0.4s;
 }
 .me--container .me--layout .me--info .me--links a i {
-  font-size: 1.5rem;
-  border: solid brown;
+  font-size: 1.6rem;
+  border: solid transparent;
   pointer-events: none;
+  position: absolute;
+  z-index: 1;
   transition: 0.1s;
+}
+.me--container .me--layout .me--info .me--links a hr {
+  width: 1rem;
+  height: 0.1rem;
+  position: absolute;
+  border: none;
+  border-radius: 1rem;
+  z-index: 2;
+  margin-top: 3rem;
+  transition: 0.4s;
+}
+.me--container .me--layout .me--info .me--links a div {
+  height: inherit;
+  width: inherit;
+  background: var(--grayBg);
+  border-radius: 4px;
+  z-index: 0;
+  transition: 0.4s;
 }
 .me--container .me--layout .me--info .me--links a:hover {
   transform: rotate(5deg) translateY(-5%);
   color: var(--textColor);
 }
+.me--container .me--layout .me--info .me--links a:hover i {
+  transform: rotate(-5deg) translateY(5%);
+}
+.me--container .me--layout .me--info .me--links a:hover hr {
+  filter: opacity(0);
+}
+.me--container .me--layout .me--info .me--links a:hover div {
+  transform: rotate(-10deg) translateY(5%);
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+}
+.me--container .me--layout .me--info .me--links .instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+.me--container .me--layout .me--info .me--links .twitter {
+  background: linear-gradient(45deg, #00ffbd, #00e4cd, #00a8d5, #008ac8);
+}
+.me--container .me--layout .me--info .me--links .github {
+  background: linear-gradient(45deg, #25d366, #6ffa1e);
+}
+.me--container .me--layout .me--info .me--links .mail {
+  background: linear-gradient(45deg, #4c3f91, #9145b6, #ff5677);
+}
 .me--container .me--layout .me--wrap {
-  border: solid brown;
+  border: solid transparent;
 }
 
 @media screen and (max-width: 850px) {
@@ -831,7 +933,8 @@ svg path {
 }
 
 .mainBody {
-  height: 100vh;
+  height: fit-content;
+  min-height: 300vh;
   width: 95.834vw;
   position: absolute;
   right: 0;

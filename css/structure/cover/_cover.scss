@@ -14,7 +14,7 @@
 
         filter: brightness(50%);
 
-        background-image: url("../../../images/golden-gate/golden-gate.jpeg");
+        background-image: url("../../../images/bg/golden-gate.jpeg");
         background-position: 50% 40%;
         
         transition: .4s;
@@ -62,14 +62,14 @@
         width: fit-content;
 
         position: absolute;
-        left: 50%;
         transform: translateX(-50%);
-        bottom: clamp(3rem, 4rem, 5rem);
+        left: 50%;
+        top: clamp(37rem, 40rem, 43rem);
 
         color: #d3d3d3;
         text-decoration: none;
 
-        transition: height .4s;
+        transition: .4s;
 
         display: flex;
         flex-direction: column;
@@ -84,5 +84,6 @@
     .cover--about--me:hover {
         //text-decoration: underline;
         height: 6rem;
+        top: clamp(36rem, 39rem, 42rem);
         color: #ececec;
     }
