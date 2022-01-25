@@ -10,8 +10,10 @@ let body = document.querySelector("body");
     let darkerWhite = "#ececec";
     let darkerGray = "#111";
     let lighterGray = "#2f2f2f";
+    let lightestGray = "#aaa";
 
     let lightText = "#222";
+    let captionText = "#444";
 
     //Variables for Elements
     let toggle = document.querySelector("#toggle");
@@ -32,7 +34,8 @@ let body = document.querySelector("body");
                 
                 //Color of elements:
                 set("textColor", "#040d21");
-                set("lighterColor", lightText)
+                set("lighterColor", lightText);
+                set("captionColor", captionText);
                 
                 set("iconBorder", "#adadad");
                 icon.classList.replace("fa-sun", "fa-moon");
@@ -51,6 +54,7 @@ let body = document.querySelector("body");
                 //Color of elements:
                 set("textColor", lighterWhite);
                 set("lighterColor", darkerWhite)
+                set("captionColor", lightestGray);
 
                 set("iconBorder", "#000");
                 icon.classList.replace("fa-moon", "fa-sun");

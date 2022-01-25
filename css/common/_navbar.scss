@@ -13,7 +13,6 @@
     position: absolute;
     min-height: 400%;
     width: 100%;
-    border: solid orange;
 
     background-color: #0000008f;
 
@@ -133,7 +132,7 @@ nav ul {
     list-style: none;
 }
 
-    nav li, nav a {
+    nav li, nav a, nav a:link {
         cursor: pointer;
         display: block;
 
@@ -143,20 +142,20 @@ nav ul {
         white-space: nowrap;
     }
 
-        nav li:hover, nav a:hover {
+        nav li:hover, nav a:hover, nav a:link:hover {
             color: #fff;
             background: #FC5185;
         }
 
-        nav li:hover i, nav a:hover i, nav a:visited:hover {
+        nav li:hover i, nav a:hover i, nav a:visited:hover, nav a:link:hover {
             color: #fff;
         }
 
-        nav a {
+        nav a, nav a:link {
             text-decoration: none;
         }
 
-            nav a:visited {
+            nav a:visited, nav a:link {
                 color: #000;
             }
 

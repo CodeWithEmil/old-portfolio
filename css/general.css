@@ -14,7 +14,6 @@
   position: absolute;
   min-height: 400%;
   width: 100%;
-  border: solid orange;
   background-color: #0000008f;
   z-index: 3;
   pointer-events: none;
@@ -123,7 +122,7 @@ nav ul {
   list-style: none;
 }
 
-nav li, nav a {
+nav li, nav a, nav a:link {
   cursor: pointer;
   display: block;
   line-height: 60px;
@@ -131,20 +130,20 @@ nav li, nav a {
   white-space: nowrap;
 }
 
-nav li:hover, nav a:hover {
+nav li:hover, nav a:hover, nav a:link:hover {
   color: #fff;
   background: #FC5185;
 }
 
-nav li:hover i, nav a:hover i, nav a:visited:hover {
+nav li:hover i, nav a:hover i, nav a:visited:hover, nav a:link:hover {
   color: #fff;
 }
 
-nav a {
+nav a, nav a:link {
   text-decoration: none;
 }
 
-nav a:visited {
+nav a:visited, nav a:link {
   color: #000;
 }
 
@@ -234,8 +233,6 @@ nav i {
     display: flex;
   }
 }
-/*Structure*/
-/*Cover*/
 @media screen and (max-width: 700px) {
   .cover--bgImage {
     height: 90vh;
@@ -244,6 +241,63 @@ nav i {
   .cover--text h3 {
     width: 50vw;
     font-size: 10px;
+  }
+}
+/*@media screen and (max-width: 750px) {
+    .delimitation--svg {
+        margin-top: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .delimitation--svg {
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .delimitation--svg {
+        margin-top: clamp(7rem, 8rem, 9rem);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .delimitation--svg {
+        margin-top: 9rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .delimitation--svg {
+        margin-top: clamp(4rem, 5rem, 6rem);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .delimitation--svg {
+        margin-top: clamp(7rem, 8rem, 9rem);
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .delimitation--svg {
+        margin-top: clamp(7rem, 8rem, 9rem);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .delimitation--svg {
+        margin-top: clamp(9rem, 10rem, 11rem);
+    }
+}*/
+@media screen and (min-width: 1440px) {
+  .delimitation--svg {
+    margin-top: -18vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .delimitation--svg {
+    margin-top: 6vh;
   }
 }
 :root {
@@ -274,6 +328,7 @@ nav i {
   background-image: url("../../images/me/me-four.png");
   background-position: var(--bX) var(--bY);
   background-size: 30rem auto;
+  background-repeat: no-repeat;
   transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
   transition: all 0.25s;
   display: flex;
@@ -282,6 +337,14 @@ nav i {
 .wrap .wrap--container p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 2.2rem;
+}
+@media (max-width: 400px) {
+  .wrap .wrap--container {
+    height: 90%;
+    width: 100%;
+    background-repeat: none;
+    background-size: 29rem auto;
+  }
 }
 .wrap .wrap--container:hover {
   box-shadow: 0 0 3rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -333,6 +396,11 @@ nav i {
   place-items: center;
 }
 
+@media screen and (max-width: 400px) {
+  .cover {
+    height: 100vh;
+  }
+}
 .cover--bgImage {
   z-index: -1;
   position: absolute;
@@ -371,7 +439,6 @@ nav i {
 }
 .delimitation--svg {
   position: absolute;
-  top: 92vh;
   z-index: -1;
 }
 
@@ -403,8 +470,9 @@ nav i {
 :root {
   --generalBg: #f9fafb;
   --grayBg: #e7e7e7;
-  --textColor: color: #040d21;
-  --lighterColor: color: #222;
+  --textColor:#040d21;
+  --lighterColor:#222;
+  --captionColor: #444;
 }
 
 .me--container {
@@ -440,10 +508,11 @@ nav i {
 }
 .me--container .me--layout .me--info .me--title {
   border: solid transparent;
+  height: 70%;
   transition: 0.4s;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .me--container .me--layout .me--info .me--title h1 {
   border: solid transparent;
@@ -454,7 +523,9 @@ nav i {
 }
 .me--container .me--layout .me--info .me--title p {
   font-size: 1.2rem;
-  color: #444;
+  color: var(--captionColor);
+  font-weight: 600;
+  transition: 0.4s;
 }
 .me--container .me--layout .me--info .me--caption {
   height: 80%;
@@ -462,11 +533,11 @@ nav i {
   border: solid transparent;
   transition: 0.4s;
   align-self: center;
-  color: #444;
+  color: var(--captionColor);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 .me--container .me--layout .me--info .me--links {
   border: solid transparent;
@@ -631,10 +702,75 @@ nav i {
   border: solid transparent;
 }
 
+@media screen and (max-width: 950px) {
+  .me--container {
+    height: 100vh;
+  }
+  .me--container .me--layout {
+    height: 100%;
+    padding-top: none;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .me--container .me--layout .me--info .me--title {
+    border: solid transparent;
+    height: 20%;
+  }
+  .me--container .me--layout .me--info .me--caption {
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+  }
+  .me--container .me--layout .me--info .me--links {
+    min-height: 4rem;
+  }
+}
 @media screen and (max-width: 850px) {
   .me--container .me--layout {
     grid-template-columns: none;
     grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 725px) {
+  .me--container {
+    margin-top: 3rem;
+    margin-bottom: 20rem;
+  }
+}
+@media screen and (max-width: 505px) {
+  .me--container {
+    margin-top: 7rem;
+    margin-bottom: 25rem;
+  }
+  .me--container .me--layout .me--info .me--title {
+    height: 108%;
+  }
+  .me--container .me--layout .me--info .me--caption {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  .me--container .me--layout .me--info .me--links {
+    height: 100%;
+    width: 105%;
+    align-self: center;
+    justify-self: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  .me--container .me--layout .me--info .me--links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .me--container .me--layout .me--info .me--links a hr {
+    display: none;
+  }
+  .me--container .me--layout .me--wrap {
+    background-repeat: none;
+    background-size: 100%;
   }
 }
 /*
@@ -714,8 +850,6 @@ svg path {
   align-items: center;
 }
 .description--container .description--content .description--content--container .description--content--text .description--content--info {
-  border: solid blueviolet;
-  border: solid 4px var(--grayBg);
   transition: border 0.4s;
   height: 19%;
   width: 62%;
