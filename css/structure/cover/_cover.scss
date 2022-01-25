@@ -6,6 +6,13 @@
     place-items: center;
 }
 
+@media screen and (max-width: 400px) {
+    .cover {
+        //max-height: 100vh;
+        height: 100vh;
+    }
+}
+
     .cover--bgImage {
         z-index: -1;
         position: absolute;
@@ -52,8 +59,9 @@
         
 .delimitation--svg {
     position: absolute;
-    top: 92vh;
+    //top: calc(100vh - 4rem);
 
+    //border: solid red;
     z-index: -1;
 }
 

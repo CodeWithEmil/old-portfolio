@@ -36,6 +36,7 @@
         background-image: url("../../images/me/me-four.png");
         background-position: var(--bX) var(--bY);
         background-size: 30rem auto;
+        background-repeat: no-repeat;
         
         transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
         transition: all .25s;
@@ -46,6 +47,15 @@
         p {
             color: hsla(0, 0%, 100%, .6);
             font-size: 2.2rem;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .wrap--container {
+            height: 90%;
+            width: 100%;
+            background-repeat: none;
+            background-size: 29rem auto;
         }
     }
 
