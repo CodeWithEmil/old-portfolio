@@ -476,7 +476,7 @@ nav i {
 }
 
 .me--container {
-  border: solid transparent;
+  border: solid red;
   color: var(--textColor);
   height: 65vh;
   width: 100%;
@@ -486,7 +486,7 @@ nav i {
   justify-content: center;
 }
 .me--container .me--layout {
-  border: solid transparent;
+  border: solid plum;
   height: 90%;
   width: 62%;
   padding-top: 1rem;
@@ -1049,6 +1049,40 @@ svg path {
     z-index: -1;
   }
 }
+:root {
+  --generalBg: #f9fafb;
+  --grayBg: #e7e7e7;
+  --textColor:#040d21;
+  --lighterColor:#222;
+  --captionColor: #444;
+}
+
+.opinions--container {
+  border: solid red;
+  color: var(--textColor);
+  height: 65vh;
+  width: 100%;
+  margin-top: 10rem;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+.opinions--container .opinions--layout {
+  border: solid plum;
+  height: 90%;
+  width: 158%;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.opinions--container .opinions--layout .options--info {
+  border: solid navy;
+}
+.opinions--container .opinions--layout .options--slider {
+  border: solid orange;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1075,6 +1109,7 @@ svg path {
 }
 
 .delimitation {
+  border: solid lime;
   position: absolute;
   z-index: 4;
   width: 62%;
