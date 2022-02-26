@@ -1,0 +1,44 @@
+:root {
+    --generalBg: #f9fafb;
+    --grayBg: #e7e7e7;
+
+    --textColor:#040d21;
+    --lighterColor:#222;
+    --captionColor: #444;
+}
+
+.opinions--container {
+    border: solid red;
+    color: var(--textColor);
+
+    height: clamp(60vh, 65vh, 70vh);
+    width: 100%;
+
+    margin-top: 10rem;
+
+    display: grid;
+    place-items: center;
+    justify-content: center;
+
+    .opinions--layout {
+        border: solid plum;
+        height: 90%;
+        width: 158%;
+
+        padding-top: 1rem;
+        //padding-left: 3rem;
+        //padding-bottom: 2rem;
+        
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 2rem;
+
+        .options--info {
+            border: solid navy;
+        }
+
+        .options--slider {
+            border: solid orange;
+        }
+    }
+}

@@ -8,7 +8,7 @@
 }
 
 .me--container {
-    border: solid transparent; // red;
+    border: solid red;
     color: var(--textColor);
 
     height: clamp(60vh, 65vh, 70vh);
@@ -21,7 +21,7 @@
     justify-content: center;
     
     .me--layout {
-        border: solid transparent; // plum;
+        border: solid plum;
         height: 90%;
         width: 62%;
 
