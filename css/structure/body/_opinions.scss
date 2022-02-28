@@ -8,36 +8,56 @@
 }
 
 .opinions--container {
-    border: solid red;
+    //border: solid rgb(235, 183, 183);
     color: var(--textColor);
 
     height: clamp(60vh, 65vh, 70vh);
     width: 100%;
-
-    margin-top: 10rem;
 
     display: grid;
     place-items: center;
     justify-content: center;
 
     .opinions--layout {
-        border: solid plum;
-        height: 90%;
-        width: 158%;
-
-        padding-top: 1rem;
-        //padding-left: 3rem;
-        //padding-bottom: 2rem;
+        //border: solid plum;
+        height: 100%;
+        width: 58.9vw; //158%;
         
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 2rem;
+        //grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "info"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+        ;
 
         .options--info {
-            border: solid navy;
+            grid-area: info;
+            //border: solid navy;
+
+            .options--title {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+
+                transition: .4s;
+            }
         }
 
         .options--slider {
+            grid-area: slider;
             border: solid orange;
         }
     }

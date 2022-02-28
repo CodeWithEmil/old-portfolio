@@ -825,6 +825,7 @@ svg path {
   min-height: 60vh;
   width: 100%;
   color: var(--textColor);
+  margin-bottom: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1060,28 +1061,32 @@ svg path {
 }
 
 .opinions--container {
-  border: solid red;
   color: var(--textColor);
   height: 65vh;
   width: 100%;
-  margin-top: 10rem;
   display: grid;
   place-items: center;
   justify-content: center;
 }
 .opinions--container .opinions--layout {
-  border: solid plum;
-  height: 90%;
-  width: 158%;
-  padding-top: 1rem;
+  height: 100%;
+  width: 58.9vw;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-template-areas: "info" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider";
 }
 .opinions--container .opinions--layout .options--info {
-  border: solid navy;
+  grid-area: info;
+}
+.opinions--container .opinions--layout .options--info .options--title {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  transition: 0.4s;
 }
 .opinions--container .opinions--layout .options--slider {
+  grid-area: slider;
   border: solid orange;
 }
 
@@ -1115,7 +1120,7 @@ svg path {
   position: absolute;
   z-index: 4;
   width: 62%;
-  height: 100%;
+  height: 70%;
   right: 18.1vw;
   pointer-events: none;
 }
