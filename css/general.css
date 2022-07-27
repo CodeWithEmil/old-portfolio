@@ -327,7 +327,7 @@ nav i {
   position: relative;
   padding: 4rem;
   border-radius: 25px;
-  background-image: url("../../images/me/me-four.png");
+  background-image: url("../../images/me/me-six.png");
   background-position: var(--bX) var(--bY);
   background-size: 30rem auto;
   background-repeat: no-repeat;
@@ -355,7 +355,7 @@ nav i {
   content: "";
   width: 2rem;
   height: 2rem;
-  border: 1px solid #ebebeb;
+  border: 5px solid #141414;
   position: absolute;
   opacity: 0.3;
   z-index: 2;
