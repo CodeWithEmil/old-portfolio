@@ -7,8 +7,8 @@
     --captionColor: #444;
 }
 
-.opinions--container {
-    border: solid rgb(235, 183, 183);
+.general--container {
+    border: solid red;
     color: var(--textColor);
 
     height: clamp(60vh, 65vh, 70vh);
@@ -18,8 +18,8 @@
     place-items: center;
     justify-content: center;
 
-    .opinions--layout {
-        border: solid plum;
+    .general--layout {
+        border: solid blue;
         height: 100%;
         width: 58.9vw; //158%;
         
@@ -41,11 +41,11 @@
             "slider"
         ;
 
-        .options--info {
+        .general--info {
             grid-area: info;
-            border: solid navy;
+            border: solid lime;
 
-            .options--title {
+            .general--title {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
@@ -56,7 +56,7 @@
             }
         }
 
-        .options--slider {
+        .general--body {
             grid-area: slider;
             border: solid orange;
         }

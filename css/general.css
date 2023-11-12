@@ -398,7 +398,7 @@ nav i {
   position: absolute;
   height: 125vh;
   width: 100%;
-  filter: brightness(40%);
+  filter: brightness(35%);
   background-image: url("https://alignthoughts.com/wp-content/uploads/2019/02/city-break-in-Europe-Milan-AlignThoughts.jpg");
   background-size: cover;
   background-position: 50% 40%;
@@ -416,7 +416,17 @@ nav i {
   place-items: center;
 }
 .cover--text h1 {
-  font-size: min(12vw, 144px);
+  font-size: min(12vw, 138px);
+}
+.cover--text h2 {
+  color: #d2d2d2;
+  font-size: min(24px, 10vw);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+.cover--text h2 span {
+  font-weight: bold;
+  color: #f9fafb;
 }
 .cover--text h3 {
   letter-spacing: 0.35rem;
@@ -425,7 +435,7 @@ nav i {
 }
 
 @media screen and (max-width: 700px) {
-  .cover--text h3 {
+  .cover--text h2 {
     display: none;
   }
 }
@@ -1050,6 +1060,7 @@ svg path {
 }
 
 .opinions--container {
+  border: solid rgb(235, 183, 183);
   color: var(--textColor);
   height: 65vh;
   width: 100%;
@@ -1058,6 +1069,7 @@ svg path {
   justify-content: center;
 }
 .opinions--container .opinions--layout {
+  border: solid plum;
   height: 100%;
   width: 58.9vw;
   display: grid;
@@ -1065,6 +1077,7 @@ svg path {
 }
 .opinions--container .opinions--layout .options--info {
   grid-area: info;
+  border: solid navy;
 }
 .opinions--container .opinions--layout .options--info .options--title {
   height: 100%;
@@ -1075,6 +1088,47 @@ svg path {
   transition: 0.4s;
 }
 .opinions--container .opinions--layout .options--slider {
+  grid-area: slider;
+  border: solid orange;
+}
+
+:root {
+  --generalBg: #f9fafb;
+  --grayBg: #e7e7e7;
+  --textColor:#040d21;
+  --lighterColor:#222;
+  --captionColor: #444;
+}
+
+.general--container {
+  border: solid red;
+  color: var(--textColor);
+  height: 65vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+.general--container .general--layout {
+  border: solid blue;
+  height: 100%;
+  width: 58.9vw;
+  display: grid;
+  grid-template-areas: "info" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider";
+}
+.general--container .general--layout .general--info {
+  grid-area: info;
+  border: solid lime;
+}
+.general--container .general--layout .general--info .general--title {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  transition: 0.4s;
+}
+.general--container .general--layout .general--body {
   grid-area: slider;
   border: solid orange;
 }

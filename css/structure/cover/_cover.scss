@@ -21,7 +21,7 @@
         height: 125vh;
         width: 100%;
 
-        filter: brightness(40%);
+        filter: brightness(35%);
 
         //background-image: url("../../../images/bg/golden-gate.jpeg");
         //background-image: url("https://sumfinity.com/wp-content/uploads/2018/09/Piazza-del-Duomo-Milano-Italy-sunrise-2048x1266.jpg");
@@ -47,7 +47,20 @@
         place-items: center;
 
         h1 {
-            font-size: min(12vw, 144px);
+            font-size: min(12vw, 138px);
+        }
+
+        h2 {
+            color: #d2d2d2;
+            font-size: min(24px, 10vw);
+            letter-spacing: .1rem;
+
+            font-weight: 600;
+            
+            span {
+                font-weight: bold;
+                color: #f9fafb;
+            }
         }
 
         h3 {
@@ -58,7 +71,7 @@
     }
 
         @media screen and (max-width: 700px) {
-            .cover--text h3 {
+            .cover--text h2 {
                 display: none;
             }
         }
