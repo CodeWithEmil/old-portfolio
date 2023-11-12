@@ -11,6 +11,7 @@
     @use "./structure/body/me";
     @use "./structure/body/details";
     @use "./structure/body/opinions";
+    @use "./structure/body/linkedin";
 
 //Font
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic");
@@ -34,7 +35,6 @@
     }
 }
 
-
 .mainBody {
     //border: solid navy;
 
@@ -44,19 +44,17 @@
 
     position: absolute;
     right: 0;
-    
-
 }
 
 .delimitation {
-    border: solid lime;
+    //border: solid lime;
 
     //display: none;
 
     position: absolute;
     z-index: 4;
     width: 62%;
-    height: 100%;
+    height: 70%;
     right: 18.1vw;
 
     pointer-events: none;

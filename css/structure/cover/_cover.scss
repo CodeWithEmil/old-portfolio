@@ -4,6 +4,8 @@
 
     display: grid;
     place-items: center;
+
+    user-select: none;
 }
 
 @media screen and (max-width: 400px) {
@@ -19,16 +21,21 @@
         height: 125vh;
         width: 100%;
 
-        filter: brightness(50%);
+        filter: brightness(40%);
 
-        background-image: url("../../../images/bg/golden-gate.jpeg");
+        //background-image: url("../../../images/bg/golden-gate.jpeg");
+        //background-image: url("https://sumfinity.com/wp-content/uploads/2018/09/Piazza-del-Duomo-Milano-Italy-sunrise-2048x1266.jpg");
+        //background-image: url("https://media.timeout.com/images/105463981/image.jpg");
+        background-image: url("https://alignthoughts.com/wp-content/uploads/2019/02/city-break-in-Europe-Milan-AlignThoughts.jpg");
+        
+        background-size:cover;
         background-position: 50% 40%;
         
         transition: .4s;
     }
 
         .cover--bgImage--after {
-            filter: brightness(25%);
+            filter: brightness(30%);
         }
 
     .cover--text {
@@ -40,7 +47,7 @@
         place-items: center;
 
         h1 {
-            font-size: min(10vw, 144px);
+            font-size: min(12vw, 144px);
         }
 
         h3 {
