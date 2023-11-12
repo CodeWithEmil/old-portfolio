@@ -14,7 +14,7 @@
   position: absolute;
   min-height: 400%;
   width: 100%;
-  background-color: #0000008f;
+  background-color: rgba(0, 0, 0, 0.5607843137);
   z-index: 3;
   pointer-events: none;
   display: none;
@@ -64,9 +64,7 @@ label.icon {
 
 nav {
   height: 100vh;
-  width: 4.166vw;
-  /*60px*/
-  /* 3.75rem*/
+  width: 4.166vw; /*60px*/ /* 3.75rem*/
   min-width: 3.75rem;
   background-color: #FFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -83,8 +81,7 @@ main {
 }
 
 #menu:checked ~ nav {
-  width: 12.5rem;
-  /*200px*/
+  width: 12.5rem; /*200px*/
 }
 
 #menu:checked ~ main {
@@ -196,11 +193,9 @@ nav i {
   #menu:checked ~ nav {
     box-shadow: rgba(17, 12, 46, 0.596) 0 0px 100px 0;
   }
-
   #menu:checked ~ main {
     width: 97%;
   }
-
   #menu:checked ~ .closure {
     display: flex;
     pointer-events: all;
@@ -211,24 +206,19 @@ nav i {
     background-color: #9FB1BD;
     position: fixed;
   }
-
   .icon .menu, .icon .menu::before, .icon .menu::after {
     background: #ececec;
   }
-
   nav {
     display: none;
     position: fixed;
   }
-
   main {
     width: 100%;
   }
-
   #menu:checked ~ main {
     width: 100%;
   }
-
   #menu:checked ~ nav {
     display: flex;
   }
@@ -237,7 +227,6 @@ nav i {
   .cover--bgImage {
     height: 90vh;
   }
-
   .cover--text h3 {
     width: 50vw;
     font-size: 10px;
@@ -335,7 +324,7 @@ nav i {
   align-items: flex-end;
 }
 .wrap .wrap--container p {
-  color: rgba(255, 255, 255, 0.6);
+  color: hsla(0, 0%, 100%, 0.6);
   font-size: 2.2rem;
 }
 @media (max-width: 400px) {
@@ -347,7 +336,7 @@ nav i {
   }
 }
 .wrap .wrap--container:hover {
-  box-shadow: 0 0 3rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
 }
 .wrap .wrap--container::before, .wrap .wrap--container::after {
   content: "";
@@ -381,7 +370,7 @@ nav i {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  color: rgba(0, 0, 0, 0.6);
+  color: hsla(0, 0%, 0%, 0.6);
   font-size: 1.6rem;
 }
 
@@ -427,8 +416,7 @@ nav i {
 }
 .cover--text h3 {
   letter-spacing: 0.35rem;
-  font-size: 1.25vw;
-  /*18px*/
+  font-size: 1.25vw; /*18px*/
   text-align: center;
 }
 
@@ -852,8 +840,7 @@ svg path {
 .description--container .description--content .description--content--container .description--content--text .description--content--info {
   transition: border 0.4s;
   height: 19%;
-  width: 62%;
-  /*58.9vw, 62%;*/
+  width: 62%; /*58.9vw, 62%;*/
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -984,7 +971,6 @@ svg path {
   .card--info {
     padding-top: 2px;
   }
-
   .description--content--rectangle {
     height: 3vh;
     position: absolute;
@@ -995,7 +981,6 @@ svg path {
   .description--content--cards {
     grid-gap: 3px;
   }
-
   .card--info--link {
     display: none;
   }
