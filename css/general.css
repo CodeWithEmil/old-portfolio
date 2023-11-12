@@ -15,7 +15,7 @@
   position: absolute;
   min-height: 400%;
   width: 100%;
-  background-color: #0000008f;
+  background-color: rgba(0, 0, 0, 0.5607843137);
   z-index: 3;
   pointer-events: none;
   display: none;
@@ -66,9 +66,7 @@ label.icon {
 nav {
   height: fit-content;
   min-height: 100vh;
-  width: 4.166vw;
-  /*60px*/
-  /* 3.75rem*/
+  width: 4.166vw; /*60px*/ /* 3.75rem*/
   min-width: 3.75rem;
   background-color: #FFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -85,8 +83,7 @@ main {
 }
 
 #menu:checked ~ nav {
-  width: 15.2rem;
-  /*200px*/
+  width: 15.2rem; /*200px*/
 }
 
 #menu:checked ~ main {
@@ -198,11 +195,9 @@ nav i {
   #menu:checked ~ nav {
     box-shadow: rgba(17, 12, 46, 0.596) 0 0px 100px 0;
   }
-
   #menu:checked ~ main {
     width: 97%;
   }
-
   #menu:checked ~ .closure {
     display: flex;
     pointer-events: all;
@@ -213,24 +208,19 @@ nav i {
     background-color: #9FB1BD;
     position: fixed;
   }
-
   .icon .menu, .icon .menu::before, .icon .menu::after {
     background: #ececec;
   }
-
   nav {
     display: none;
     position: fixed;
   }
-
   main {
     width: 100%;
   }
-
   #menu:checked ~ main {
     width: 100%;
   }
-
   #menu:checked ~ nav {
     display: flex;
   }
@@ -239,7 +229,6 @@ nav i {
   .cover--bgImage {
     height: 90vh;
   }
-
   .cover--text h3 {
     width: 50vw;
     font-size: 10px;
@@ -327,7 +316,7 @@ nav i {
   position: relative;
   padding: 4rem;
   border-radius: 25px;
-  background-image: url("../../images/me/me-six.png");
+  background-image: url("../../images/me/emilio-3.png");
   background-position: var(--bX) var(--bY);
   background-size: 30rem auto;
   background-repeat: no-repeat;
@@ -337,7 +326,7 @@ nav i {
   align-items: flex-end;
 }
 .wrap .wrap--container p {
-  color: rgba(255, 255, 255, 0.6);
+  color: hsla(0, 0%, 100%, 0.6);
   font-size: 2.2rem;
 }
 @media (max-width: 400px) {
@@ -349,7 +338,7 @@ nav i {
   }
 }
 .wrap .wrap--container:hover {
-  box-shadow: 0 0 3rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3rem 0.5rem hsla(0, 0%, 0%, 0.2);
 }
 .wrap .wrap--container::before, .wrap .wrap--container::after {
   content: "";
@@ -383,7 +372,7 @@ nav i {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  color: rgba(0, 0, 0, 0.6);
+  color: hsla(0, 0%, 0%, 0.6);
   font-size: 1.6rem;
 }
 
@@ -396,6 +385,7 @@ nav i {
   width: 100%;
   display: grid;
   place-items: center;
+  user-select: none;
 }
 
 @media screen and (max-width: 400px) {
@@ -408,14 +398,15 @@ nav i {
   position: absolute;
   height: 125vh;
   width: 100%;
-  filter: brightness(50%);
-  background-image: url("../../../images/bg/golden-gate.jpeg");
+  filter: brightness(40%);
+  background-image: url("https://alignthoughts.com/wp-content/uploads/2019/02/city-break-in-Europe-Milan-AlignThoughts.jpg");
+  background-size: cover;
   background-position: 50% 40%;
   transition: 0.4s;
 }
 
 .cover--bgImage--after {
-  filter: brightness(25%);
+  filter: brightness(30%);
 }
 
 .cover--text {
@@ -425,12 +416,11 @@ nav i {
   place-items: center;
 }
 .cover--text h1 {
-  font-size: min(10vw, 144px);
+  font-size: min(12vw, 144px);
 }
 .cover--text h3 {
   letter-spacing: 0.35rem;
-  font-size: 1.25vw;
-  /*18px*/
+  font-size: 1.25vw; /*18px*/
   text-align: center;
 }
 
@@ -478,17 +468,16 @@ nav i {
 }
 
 .me--container {
-  border: solid red;
   color: var(--textColor);
   height: 65vh;
   width: 100%;
   margin-top: 1rem;
+  padding-top: 1rem;
   display: grid;
-  place-items: center;
-  justify-content: center;
+  justify-items: center;
+  align-items: end;
 }
 .me--container .me--layout {
-  border: solid plum;
   height: 90%;
   width: 62%;
   padding-top: 1rem;
@@ -517,7 +506,6 @@ nav i {
   justify-content: space-between;
 }
 .me--container .me--layout .me--info .me--title h1 {
-  border: solid transparent;
   font-size: 2.8rem;
   /*span {
       font-weight: lighter;
@@ -534,12 +522,16 @@ nav i {
   width: 80%;
   border: solid transparent;
   transition: 0.4s;
-  align-self: center;
+  align-self: top;
   color: var(--captionColor);
+  text-align: justify;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
+}
+.me--container .me--layout .me--info .me--caption span {
+  font-weight: bold;
 }
 .me--container .me--layout .me--info .me--links {
   border: solid transparent;
@@ -855,8 +847,7 @@ svg path {
 .description--container .description--content .description--content--container .description--content--text .description--content--info {
   transition: border 0.4s;
   height: 19%;
-  width: 62%;
-  /*58.9vw, 62%;*/
+  width: 62%; /*58.9vw, 62%;*/
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -987,7 +978,6 @@ svg path {
   .card--info {
     padding-top: 2px;
   }
-
   .description--content--rectangle {
     height: 3vh;
     position: absolute;
@@ -998,7 +988,6 @@ svg path {
   .description--content--cards {
     grid-gap: 3px;
   }
-
   .card--info--link {
     display: none;
   }
@@ -1090,6 +1079,49 @@ svg path {
   border: solid orange;
 }
 
+:root {
+  --generalBg: #f9fafb;
+  --grayBg: #e7e7e7;
+  --textColor:#040d21;
+  --lighterColor:#222;
+  --captionColor: #444;
+}
+
+.linkedin--container {
+  color: var(--textColor);
+  height: 65vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+.linkedin--container .linkedin--layout {
+  height: 100%;
+  width: 58.9vw;
+  display: grid;
+  grid-template-areas: "info" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider" "slider";
+}
+.linkedin--container .linkedin--layout .linkedin--info {
+  grid-area: info;
+}
+.linkedin--container .linkedin--layout .linkedin--info .linkedin--title {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  transition: 0.4s;
+}
+.linkedin--container .linkedin--layout .linkedin--content {
+  grid-area: slider;
+  display: grid;
+  justify-content: center;
+  align-items: start;
+}
+.linkedin--container .linkedin--layout .linkedin--content div {
+  scale: 1.2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1116,7 +1148,6 @@ svg path {
 }
 
 .delimitation {
-  border: solid lime;
   position: absolute;
   z-index: 4;
   width: 62%;
