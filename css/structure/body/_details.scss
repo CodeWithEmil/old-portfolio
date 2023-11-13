@@ -8,6 +8,7 @@
 
     --textColor: color: #040d21;
     --lighterColor: color: #222;
+    --captionColor: #444;
 }
 
 /*
@@ -120,7 +121,7 @@ body {
                     align-items: flex-start;
         
                     p {
-                        color: var(--lighterColor);
+                        color: var(--captionColor);
                         font-weight: 350;
                         transition: .4s;
                     }
@@ -170,6 +171,8 @@ body {
                                 background-size: 100%;
                                 background-position: 50% 50%;
                                 border-radius: 8px;
+
+                                box-shadow: rgba(17, 12, 46, 0.253) 0 8px 20px 0;
                             }
             
                                 .card--one {
@@ -236,7 +239,7 @@ body {
                         }
             
                         //Icons and emojis at the end of each one of the featured projects
-                        .second--element {
+                        /*.second--element {
                             .card--info {
                                 .card--info--link {
                                     span::after {
@@ -244,7 +247,7 @@ body {
                                     }
                                 }
                             }
-                        }
+                        }*/
             
                         .third--element {
                             .card--info {

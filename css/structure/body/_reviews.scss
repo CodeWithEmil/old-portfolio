@@ -1,0 +1,211 @@
+:root {
+    --generalBg: #f9fafb;
+    --grayBg: #e7e7e7;
+
+    --textColor:#040d21;
+    --lighterColor:#222;
+    --captionColor: #444;
+}
+
+.reviews--body {
+    //border: solid red;
+
+    padding: 1.5rem 0 1rem 0;
+    display: grid;
+}
+
+.gallery-cell {
+    width: 100%;
+    height: clamp(40vh, 50vh, 55vh);
+    margin-right: 10px;
+    //background: #8C8;
+    //background: #e7e7e7 !important;
+    //border: solid black;
+    border-radius: 12px;
+    counter-increment: gallery-cell;
+
+    display: grid;
+    place-items: center;
+    
+    .cell-content {
+        height: 84%;
+        width: 92%;
+
+        background: #f9fafb;
+        border-radius: 8px;
+
+        box-shadow: rgba(17, 12, 46, 0.208) 0 48px 100px 0;
+        //border: solid red;
+        padding-right: 2.8rem;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        
+        .cell-img {
+            //border: solid orange;
+            background: #fff;
+            border-radius: 300px;
+            box-shadow: rgba(17, 12, 46, 0.208) 0 48px 100px 0;
+            
+            grid-column: 1;
+            place-self: center;
+            
+            height: 15vw;
+            width: 15vw;
+            
+            display: grid;
+            place-items: center;
+
+            img {
+                height: 85%;
+                width: 85%;
+                border-radius: 400px;
+            }
+
+            .img-one {
+                height: 70%;
+                width: 70%;
+            }
+        }
+        
+        .cell-text {
+            grid-column: 2;
+            //border: solid red;
+
+            display: grid;
+            grid-template-rows: 2fr 3fr;
+            //padding: 2rem 0;
+
+            .cell-quote {
+                grid-row: 1;
+                place-self: center;
+
+                height: 6vw;
+                width: 6vw;
+
+                background-color: #fff;
+                //background-color: #bfe1ff;
+                box-shadow: rgba(17, 12, 46, 0.208) 0 48px 100px 0;
+                border-radius: 150px;
+                
+                display: grid;
+                place-items: center;
+                
+                i {
+                    font-size: 2rem;
+                    color: #444;
+                }
+            }
+            
+            section {
+                grid-row: 2;
+                //border: solid blue;
+
+                //padding: 1rem 0;
+                padding-bottom: 2.5rem;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+
+                h3 {
+                    grid-row: 2;
+                    //border: solid lime;
+                    place-self: center;
+                    text-align: center;
+
+                    color: #040d21;
+                    
+                    span {
+                        color: #7d7d7d;
+                    }
+                }
+                
+                p {
+                    grid-row: 1;
+                    place-self: center;
+                    //border: solid orange;
+                    color: #444;
+
+                    text-align: center;
+                }
+
+                .cell-stars {
+                    grid-row: 3;
+                    //border: solid plum;
+
+                    place-self: center;
+
+                    display: grid;
+                    justify-content: space-around;
+
+                    display: inline;
+
+                    color: #ffbf00;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    p {
+        transition: .4s;
+    }
+}
+
+
+.cell-one {
+    background: #f22c2c;
+}
+
+.cell-two {
+    background: #ecc413;
+}
+
+.cell-three {
+    background: #50f626;
+}
+
+.cell-four {
+    background: #21cfe2;
+}
+
+.cell-five {
+    background: #af98ff;
+}
+
+@media screen and (min-width: 768px) { 
+    .carousel-cell {
+        width: 50%;
+    }
+}
+
+/*.gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}*/
+
+//Arrows
+.flickity-prev-next-button {
+    margin-right: -4.5rem;
+    margin-left: -4.5rem;
+
+    background: transparent;
+}
+
+.flickity-prev-next-button.no-svg {
+    background: transparent;
+}
+
+//Dots
+.flickity-page-dots .dot {
+    transition: .4s;
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: var(--textColor);
+    filter: none;
+    //transition: .4s;
+}

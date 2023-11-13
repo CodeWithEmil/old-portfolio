@@ -9,7 +9,7 @@
             <link rel = "stylesheet" href = "css/general.css">
 
             <!--Other stylesheets-->
-            <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+            <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
             <script src="https://kit.fontawesome.com/b1a0b78bd7.js" crossorigin="anonymous"></script>
 
@@ -224,37 +224,133 @@
 
                     <br><br>
 
-                    <div class = "opinions--container">
-                        <div class = "opinions--layout">
-                            <div class = "options--info">
-
-                                <div class = "options--title">
-                                    <h1 class = "mainTitle">Reviews</h1>
-                                    <p><!--Some of the most important-->What is people thinking about Emilio</p>
-                                </div>
-
-                            </div>
-
-                            <div class = "options--slider">
-                                <div class = "options--arrow--back"></div>
-                                <div class = "options--arrow--review"></div>
-                                <div class = "options--arrow--front"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                    <br><br>
-                    <br><br>
-
                     <div class = "general--container">
                         <div class = "general--layout">
                             <div class = "general--info">
 
                                 <div class = "general--title">
+                                    <h1 class = "mainTitle">Reviews</h1><br>
+                                    <p>Some people's opinion regarding my work.</p>
+                                </div>
+
+                            </div>
+                            <br>
+
+                            <div class = "general--body reviews--body">
+                                <div class="main-gallery js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "wrapAround": true }'>
+                                    
+                                    <div class="gallery-cell cell-four">
+                                        <div class = "cell-content">
+                                            <div class = "cell-img"><img src="https://media.licdn.com/dms/image/D5603AQHSR_0lLYkN_g/profile-displayphoto-shrink_800_800/0/1695332643272?e=2147483647&v=beta&t=FY8-cqVeYsMvV281lw4BZVBNhpgs8X6O5-l6nC8dMIM" alt=""></div>
+                                            <div class = "cell-text">
+                                                <div class = "cell-quote"><i class="fa-solid fa-quote-right"></i></div>
+                                                <section>
+                                                    <h3><span>—</span> María Muñoz, <span>intern at Pasante</span></h3>
+                                                    <p>"When I first tried Soundify, my life changed completely. Since I am a very stressed-out person, it helped me deal with my anxiety and stress."</p>
+                                                    <div class = "cell-stars">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star-half"></i>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="gallery-cell cell-three">
+                                        <div class = "cell-content">
+                                            <div class = "cell-img"><img src="https://media.licdn.com/dms/image/C4E03AQHN2g0AIDoOsQ/profile-displayphoto-shrink_200_200/0/1517708393464?e=2147483647&v=beta&t=TQE7s9ZIMCDp5cSB5A_7aO7xRGvq8qzA6BjoVeXcmqc" class = "img-one" alt=""></div>
+                                            <div class = "cell-text">
+                                                <div class = "cell-quote"><i class="fa-solid fa-quote-right"></i></div>
+                                                <section>
+                                                    <h3><span>—</span> Israel Nájera, <span>CEO at Invernet</span></h3>
+                                                    <p>"An inspiration for the community. With so many projects and stuff available, he's one of my first options when it comes to web development."</p>
+                                                    <div class = "cell-stars">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star-half"></i>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="gallery-cell cell-two">
+                                        <div class = "cell-content">
+                                            <div class = "cell-img"><img src="https://i.pinimg.com/280x280_RS/f0/e9/3a/f0e93aba597e15df3f2bb258afe51669.jpg" alt=""></div>
+                                            <div class = "cell-text">
+                                                <div class = "cell-quote"><i class="fa-solid fa-quote-right"></i></div>
+                                                <section>
+                                                    <h3><span>—</span> Lawrence Lanoff, <span>cinema director</span></h3>
+                                                    <p>"Honestly, when I first hired this little guy, I wouldn't have thought he would do such a great job at OpenSea.io! My god!"</p>
+                                                    <div class = "cell-stars">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="gallery-cell cell-five">
+                                        <div class = "cell-content">
+                                            <div class = "cell-img"><img src="/images/profiles/diego.png" alt=""></div>
+                                            <div class = "cell-text">
+                                                <div class = "cell-quote"><i class="fa-solid fa-quote-right"></i></div>
+                                                <section>
+                                                    <h3><span>—</span> Diego Valencia, <span>student at UCLA</span></h3>
+                                                    <p>"Emilio is just on another level. He taught me web development from zero and even helped me get into University of California: Los Ángeles!"</p>
+                                                    <div class = "cell-stars">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>   
+
+                                    <div class="gallery-cell cell-one">
+                                        <div class = "cell-content">
+                                            <div class = "cell-img"><img src="https://yt3.googleusercontent.com/shPA9eXVImsrIVc6tQNJWwJTvrKZzwhitFP1fk3NEIlfmRH6O5iEx7fpUdlGssHVdB9rOXI3XA=s900-c-k-c0x00ffffff-no-rj" alt=""></div>
+                                            <div class = "cell-text">
+                                                <div class = "cell-quote"><i class="fa-solid fa-quote-right"></i></div>
+                                                <section>
+                                                    <h3><span>—</span> Ankit Rajeem, <span>CodeWithRandom CEO</span></h3>
+                                                    <p>"What can I say, I've never met such a hard-working and focused developer. And it gets better: his working standards are shown through results!"</p>
+                                                    <div class = "cell-stars">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <br><br>
+
+                    <!--<div class = "general--container">
+                        <div class = "general--layout">
+                            <div class = "general--info">
+
+                                <div class = "general--title">
                                     <h1 class = "mainTitle">Reviews</h1>
-                                    <p><!--Some of the most important-->What is people thinking about Emilio</p>
+                                    <p>What is people thinking about Emilio</p>
                                 </div>
 
                             </div>
@@ -266,7 +362,7 @@
 
                     
 
-                    <!--<div class = "linkedin--container">
+                    <div class = "linkedin--container">
                         <div class = "linkedin--layout">
                             <div class = "linkedin--info">
 
@@ -290,7 +386,6 @@
             <script src = "js/style.js"></script>
             <script src = "js/card.js"></script>
             <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-            <script src="/path/to/flickity.pkgd.min.js"></script>
-
+            <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         </body>
     </html>
