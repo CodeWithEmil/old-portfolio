@@ -73,3 +73,48 @@
             margin-top: 6vh;
         }
     }
+
+
+
+
+//!ReviewsCSS File
+/*
+@media screen and (max-width: 1435px) {
+    .reviews--body {
+        padding: none;
+    }
+    
+    .cell-text {
+        grid-template-rows: 1fr 3fr !important;
+        border: solid red;
+
+        .cell-quote {
+            background-color: #000;
+            border: solid lime;
+        }
+
+        section {
+            border: solid navy;
+            padding: none;
+
+            h3 {
+                border: solid lime;
+                place-self: start !important;
+            }
+            p {
+                border: solid orange;
+                place-self: start !important;
+            }
+            .cell-stars {
+                border: solid plum;
+                place-self: start !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) { 
+    .carousel-cell {
+        width: 50%;
+    }
+}*/

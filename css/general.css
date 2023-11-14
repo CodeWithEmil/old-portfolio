@@ -299,6 +299,46 @@ nav i {
     margin-top: 6vh;
   }
 }
+/*
+@media screen and (max-width: 1435px) {
+    .reviews--body {
+        padding: none;
+    }
+
+    .cell-text {
+        grid-template-rows: 1fr 3fr !important;
+        border: solid red;
+
+        .cell-quote {
+            background-color: #000;
+            border: solid lime;
+        }
+
+        section {
+            border: solid navy;
+            padding: none;
+
+            h3 {
+                border: solid lime;
+                place-self: start !important;
+            }
+            p {
+                border: solid orange;
+                place-self: start !important;
+            }
+            .cell-stars {
+                border: solid plum;
+                place-self: start !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) { 
+    .carousel-cell {
+        width: 50%;
+    }
+}*/
 :root {
   --generalBg: #f9fafb;
   --grayBg: #e7e7e7;
@@ -1038,7 +1078,6 @@ svg path {
     height: 15%;
   }
   .description--container .description--content .description--content--container .description--content--text .description--content--cards {
-    border: solid red;
     grid-template: repeat(3, 1fr)/none;
     height: 85%;
   }
@@ -1155,13 +1194,15 @@ svg path {
 }
 .gallery-cell .cell-content .cell-text section {
   grid-row: 2;
-  padding-bottom: 2.5rem;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-between;*/
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: start;
+  align-items: start;
 }
 .gallery-cell .cell-content .cell-text section h3 {
   grid-row: 2;
-  place-self: center;
   text-align: center;
   color: #040d21;
 }
@@ -1170,18 +1211,18 @@ svg path {
 }
 .gallery-cell .cell-content .cell-text section p {
   grid-row: 1;
-  place-self: center;
   color: #444;
   text-align: center;
 }
 .gallery-cell .cell-content .cell-text section .cell-stars {
   grid-row: 3;
-  place-self: center;
   display: grid;
-  justify-content: space-around;
-  display: inline;
+  justify-content: center;
+}
+.gallery-cell .cell-content .cell-text section .cell-stars p {
   color: #ffbf00;
   font-size: 1.5rem;
+  margin-right: 1rem;
 }
 .gallery-cell p {
   transition: 0.4s;
@@ -1207,17 +1248,6 @@ svg path {
   background: #af98ff;
 }
 
-@media screen and (max-width: 1430px) {
-  .cell-text {
-    grid-template-rows: 1fr 3fr;
-    border: solid red;
-  }
-}
-@media screen and (min-width: 768px) {
-  .carousel-cell {
-    width: 50%;
-  }
-}
 /*.gallery-cell:before {
     display: block;
     text-align: center;
