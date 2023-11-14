@@ -1357,6 +1357,7 @@ svg path {
   }
   .invisible--div--responsive {
     display: inline;
+    filter: opacity(0);
   }
 }
 .delimitation {
