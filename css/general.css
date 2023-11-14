@@ -1330,12 +1330,12 @@ svg path {
   scroll-behavior: smooth;
 }
 
-.invisible--div {
+.invisible--, .invisible--div--responsive {
   pointer-events: none;
   user-select: none;
   filter: opacity(0);
 }
-.invisible--div h1 {
+.invisible-- h1, .invisible--div--responsive h1 {
   font-size: 5rem;
 }
 
@@ -1356,8 +1356,8 @@ svg path {
     width: 100vw;
   }
   .invisible--div--responsive {
+    border: solid red;
     display: inline;
-    filter: opacity(0);
   }
 }
 .delimitation {
