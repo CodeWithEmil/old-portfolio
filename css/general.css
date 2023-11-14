@@ -1339,6 +1339,10 @@ svg path {
   font-size: 5rem;
 }
 
+.invisible--div--responsive {
+  display: none;
+}
+
 .mainBody {
   height: fit-content;
   min-height: 300vh;
@@ -1350,6 +1354,9 @@ svg path {
 @media screen and (max-width: 500px) {
   .mainBody {
     width: 100vw;
+  }
+  .invisible--div--responsive {
+    display: inline;
   }
 }
 .delimitation {
