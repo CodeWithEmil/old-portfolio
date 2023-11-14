@@ -47,6 +47,12 @@
     right: 0;
 }
 
+@media screen and (max-width: 500px) {
+    .mainBody {
+        width: 100vw;
+    }
+}
+
 .delimitation {
     //border: solid lime;
 

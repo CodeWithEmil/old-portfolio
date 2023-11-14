@@ -47,6 +47,7 @@
         place-items: center;
 
         h1 {
+            text-align: center;
             font-size: min(12vw, 138px);
         }
 
@@ -56,6 +57,10 @@
             letter-spacing: .1rem;
 
             font-weight: 600;
+
+            div {
+                display: inline;
+            }
             
             span {
                 font-weight: bold;
@@ -70,9 +75,27 @@
         }
     }
 
+        @media screen and (max-width: 950px) {
+            .cover--text {
+                h2 {
+                    div {
+                        display: block;
+                    }
+                }
+            }
+        }
+
         @media screen and (max-width: 700px) {
-            .cover--text h2 {
-                display: none;
+            .cover--text {
+                h1 {
+                    span {
+                        display: block;
+                    }
+                }
+
+                h2 {
+                    display: none;
+                }
             }
         }
 

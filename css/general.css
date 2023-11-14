@@ -192,8 +192,16 @@ nav i {
 }
 
 @media screen and (max-width: 500px) {
+  nav {
+    display: none;
+  }
+  .icon {
+    background: none;
+  }
   #menu:checked ~ nav {
+    display: inline;
     box-shadow: rgba(17, 12, 46, 0.596) 0 0px 100px 0;
+    transition: 0.4s;
   }
   #menu:checked ~ main {
     width: 97%;
@@ -416,6 +424,7 @@ nav i {
   place-items: center;
 }
 .cover--text h1 {
+  text-align: center;
   font-size: min(12vw, 138px);
 }
 .cover--text h2 {
@@ -423,6 +432,9 @@ nav i {
   font-size: min(24px, 10vw);
   letter-spacing: 0.1rem;
   font-weight: 600;
+}
+.cover--text h2 div {
+  display: inline;
 }
 .cover--text h2 span {
   font-weight: bold;
@@ -434,7 +446,15 @@ nav i {
   text-align: center;
 }
 
+@media screen and (max-width: 950px) {
+  .cover--text h2 div {
+    display: block;
+  }
+}
 @media screen and (max-width: 700px) {
+  .cover--text h1 span {
+    display: block;
+  }
   .cover--text h2 {
     display: none;
   }
@@ -1327,6 +1347,11 @@ svg path {
   right: 0;
 }
 
+@media screen and (max-width: 500px) {
+  .mainBody {
+    width: 100vw;
+  }
+}
 .delimitation {
   position: absolute;
   z-index: 4;

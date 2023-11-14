@@ -219,8 +219,18 @@ nav ul {
                 }
 
             @media screen and (max-width: 500px) {
+                nav {
+                    display: none;
+                }
+
+                .icon {
+                    background: none;
+                }
+
                 #menu:checked ~ nav {
+                    display: inline;
                     box-shadow: rgba(17, 12, 46, 0.596) 0 0px 100px 0;
+                    transition: .4s;
                 }
 
                 #menu:checked ~ main { 
