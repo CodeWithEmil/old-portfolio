@@ -51,17 +51,6 @@
     right: 0;
 }
 
-@media screen and (max-width: 500px) {
-    .mainBody {
-        width: 100vw;
-    }
-
-    .invisible--div--responsive {
-        color: transparent;
-        display: inline;
-    }
-}
-
 .delimitation {
     //border: solid lime;
 
@@ -74,4 +63,33 @@
     right: 18.1vw;
 
     pointer-events: none;
+}
+
+.margin--bottom {
+    margin-bottom: 30vh;
+}
+
+
+
+//!RESPONSIVE
+
+@media screen and (max-width: 850px) {
+    .invisible--div--responsive {
+        color: transparent;
+        display: inline;
+    }
+
+    .margin--bottom {
+        margin-bottom: 70vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mainBody {
+        width: 100vw;
+    }
+
+    .margin--bottom {
+        margin-bottom: 80vh;
+    }
 }

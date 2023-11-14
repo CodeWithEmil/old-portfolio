@@ -78,6 +78,7 @@
             //padding: 2rem 0;
 
             .cell-quote {
+                //border: solid lime;
                 grid-row: 1;
                 place-self: center;
 
@@ -170,6 +171,13 @@
 
 .cell-five {
     background: #af98ff;
+}
+
+@media screen and (max-width: 1430px) {
+    .cell-text {
+        grid-template-rows: 1fr 3fr;
+        border: solid red;
+    }
 }
 
 @media screen and (min-width: 768px) { 

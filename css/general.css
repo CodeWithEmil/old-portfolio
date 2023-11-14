@@ -1038,6 +1038,7 @@ svg path {
     height: 15%;
   }
   .description--container .description--content .description--content--container .description--content--text .description--content--cards {
+    border: solid red;
     grid-template: repeat(3, 1fr)/none;
     height: 85%;
   }
@@ -1206,6 +1207,12 @@ svg path {
   background: #af98ff;
 }
 
+@media screen and (max-width: 1430px) {
+  .cell-text {
+    grid-template-rows: 1fr 3fr;
+    border: solid red;
+  }
+}
 @media screen and (min-width: 768px) {
   .carousel-cell {
     width: 50%;
@@ -1351,15 +1358,6 @@ svg path {
   right: 0;
 }
 
-@media screen and (max-width: 500px) {
-  .mainBody {
-    width: 100vw;
-  }
-  .invisible--div--responsive {
-    color: transparent;
-    display: inline;
-  }
-}
 .delimitation {
   position: absolute;
   z-index: 4;
@@ -1367,6 +1365,28 @@ svg path {
   height: 70%;
   right: 18.1vw;
   pointer-events: none;
+}
+
+.margin--bottom {
+  margin-bottom: 30vh;
+}
+
+@media screen and (max-width: 850px) {
+  .invisible--div--responsive {
+    color: transparent;
+    display: inline;
+  }
+  .margin--bottom {
+    margin-bottom: 70vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mainBody {
+    width: 100vw;
+  }
+  .margin--bottom {
+    margin-bottom: 80vh;
+  }
 }
 
 /*# sourceMappingURL=general.css.map */
