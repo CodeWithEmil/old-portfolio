@@ -51,8 +51,8 @@
             grid-column: 1;
             place-self: center;
             
-            height: 15vw;
-            width: 15vw;
+            height: max(100px, 15vw);
+            width: max(100px, 15vw);
             
             display: grid;
             place-items: center;
@@ -212,4 +212,96 @@
     background: var(--textColor);
     filter: none;
     //transition: .4s;
+}
+
+
+
+
+//!ReviewsCSS File
+
+/*@media screen and (max-width: 1435px) {
+    .reviews--body {
+        padding: none;
+    }
+}*/
+
+@media screen and (max-width: 850px) {
+    .cell-content {
+        height: 80% !important;
+        padding: 0 1.5rem !important;
+
+
+        border: solid black;
+
+        display: grid;
+        //place-items: center;
+        grid-template-rows: 2fr 3fr;
+        grid-template-columns: 100% !important;
+        justify-content: start;
+
+
+        .cell-img {
+            //display: none !important;
+            place-self: none;
+            grid-row: 1;
+            grid-column: 1;
+            //border: solid plum;
+        }
+
+        .cell-text {
+            //display: none !important;
+            grid-row: 2;
+            grid-column: 1 !important;
+            //border: solid red;
+            width: stretch;
+
+            grid-template-rows: 1fr !important;
+            justify-content: center !important;
+
+            .cell-quote {
+                display: none !important;
+            }
+
+            section {
+                grid-row: 1 !important;
+                border: solid transparent;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .cell-text {
+        section {
+
+            p {
+                font-size: 2.8vw;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .cell-stars {
+
+        p {
+            font-size: 1rem !important;
+            margin-right: .5rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .cell-quote {
+        height: 5rem !important;
+        width: 5rem !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-cell {
+        width: 50%;
+    }
 }
