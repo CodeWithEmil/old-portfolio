@@ -26,7 +26,7 @@
     scroll-behavior: smooth;
 }
 
-.invisible--, .invisible--div--responsive {
+.invisible--div, .invisible--div--responsive {
     pointer-events: none;
     user-select: none;
     filter: opacity(0);
@@ -57,7 +57,7 @@
     }
 
     .invisible--div--responsive {
-        border: solid red;
+        color: transparent;
         display: inline;
     }
 }

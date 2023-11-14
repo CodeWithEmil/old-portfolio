@@ -1330,12 +1330,12 @@ svg path {
   scroll-behavior: smooth;
 }
 
-.invisible--, .invisible--div--responsive {
+.invisible--div, .invisible--div--responsive {
   pointer-events: none;
   user-select: none;
   filter: opacity(0);
 }
-.invisible-- h1, .invisible--div--responsive h1 {
+.invisible--div h1, .invisible--div--responsive h1 {
   font-size: 5rem;
 }
 
@@ -1356,7 +1356,7 @@ svg path {
     width: 100vw;
   }
   .invisible--div--responsive {
-    border: solid red;
+    color: transparent;
     display: inline;
   }
 }
