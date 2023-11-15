@@ -366,10 +366,7 @@
             .me--info {
                 .me--title {
                     height: 108%;
-
-                    p {
-                        margin-bottom: 1.8rem;
-                    }
+                    justify-content: space-evenly; 
                 }
                 
                 .me--caption {

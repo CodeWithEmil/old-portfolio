@@ -768,9 +768,7 @@ nav i {
   }
   .me--container .me--layout .me--info .me--title {
     height: 108%;
-  }
-  .me--container .me--layout .me--info .me--title p {
-    margin-bottom: 1.8rem;
+    justify-content: space-evenly;
   }
   .me--container .me--layout .me--info .me--caption {
     width: 100%;
