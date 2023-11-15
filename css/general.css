@@ -769,9 +769,13 @@ nav i {
   .me--container .me--layout .me--info .me--title {
     height: 108%;
   }
+  .me--container .me--layout .me--info .me--title p {
+    margin-bottom: 1.8rem;
+  }
   .me--container .me--layout .me--info .me--caption {
     width: 100%;
     height: 100%;
+    margin-bottom: 1.8rem;
     justify-content: center;
   }
   .me--container .me--layout .me--info .me--links {
