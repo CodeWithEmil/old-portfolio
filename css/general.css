@@ -1244,7 +1244,6 @@ svg path {
   .cell-content {
     height: 80% !important;
     padding: 0 1.5rem !important;
-    border: solid black;
     display: grid;
     grid-template-rows: 2fr 3fr;
     grid-template-columns: 100% !important;
